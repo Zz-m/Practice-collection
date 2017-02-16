@@ -11,8 +11,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
-      <module name="Building_a_RESTful_Web_Service" target="1.8" />
-      <module name="Building_Java_Projects_with_Maven" target="1.8" />
+      <module name="Building_a_RESTful_Web_Service" target="1.6" />
+      <module name="Building_Java_Projects_with_Maven" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
