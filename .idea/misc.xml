@@ -5,13 +5,11 @@
       <list>
         <option value="$PROJECT_DIR$/Building_a_RESTful_Web_Service/pom.xml" />
         <option value="$PROJECT_DIR$/Building_Java_Projects_with_Maven/src/pom.xml" />
+        <option value="$PROJECT_DIR$/Building_Java_Projects_with_Maven/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_3" default="false">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_3" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
-  </component>
-  <component name="SvnConfiguration">
-    <configuration>C:\Users\123\AppData\Roaming\Subversion</configuration>
   </component>
 </project>

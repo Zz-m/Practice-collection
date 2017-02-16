@@ -7,12 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Building_a_RESTful_Web_Service" />
-        <module name="gs-maven" />
+        <module name="Building_Java_Projects_with_Maven" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="Building_a_RESTful_Web_Service" target="1.5" />
-      <module name="gs-maven" target="1.5" />
+    <bytecodeTargetLevel target="1.8">
+      <module name="Building_a_RESTful_Web_Service" target="1.8" />
+      <module name="Building_Java_Projects_with_Maven" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
