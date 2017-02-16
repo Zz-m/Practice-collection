@@ -8,12 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Building_a_RESTful_Web_Service" />
         <module name="Building_Java_Projects_with_Maven" />
+        <module name="Consuming_a_RESTful_Web_Service" />
         <module name="SchedulingTasks" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
       <module name="Building_a_RESTful_Web_Service" target="1.8" />
       <module name="Building_Java_Projects_with_Maven" target="1.5" />
+      <module name="Consuming_a_RESTful_Web_Service" target="1.8" />
       <module name="SchedulingTasks" target="1.8" />
     </bytecodeTargetLevel>
   </component>
