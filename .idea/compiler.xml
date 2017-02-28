@@ -11,6 +11,7 @@
         <module name="Building_Java_Projects_with_Maven" />
         <module name="Consuming_a_RESTful_Web_Service" />
         <module name="SchedulingTasks" />
+        <module name="Uploading_Files" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
@@ -19,6 +20,7 @@
       <module name="Building_Java_Projects_with_Maven" target="1.5" />
       <module name="Consuming_a_RESTful_Web_Service" target="1.8" />
       <module name="SchedulingTasks" target="1.8" />
+      <module name="Uploading_Files" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
