@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Accessing_Relational_Data_using_JDBC_with_Spring" />
+        <module name="Authenticating_a_User_with_LDAP" />
         <module name="Building_a_RESTful_Web_Service" />
         <module name="Building_Java_Projects_with_Maven" />
         <module name="Consuming_a_RESTful_Web_Service" />
@@ -16,6 +17,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
       <module name="Accessing_Relational_Data_using_JDBC_with_Spring" target="1.8" />
+      <module name="Authenticating_a_User_with_LDAP" target="1.8" />
       <module name="Building_a_RESTful_Web_Service" target="1.8" />
       <module name="Building_Java_Projects_with_Maven" target="1.5" />
       <module name="Consuming_a_RESTful_Web_Service" target="1.8" />
