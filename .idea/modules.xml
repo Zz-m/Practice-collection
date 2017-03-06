@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/Building_Java_Projects_with_Maven/Building_Java_Projects_with_Maven.iml" filepath="$PROJECT_DIR$/Building_Java_Projects_with_Maven/Building_Java_Projects_with_Maven.iml" />
       <module fileurl="file://$PROJECT_DIR$/Building_a_RESTful_Web_Service/Building_a_RESTful_Web_Service.iml" filepath="$PROJECT_DIR$/Building_a_RESTful_Web_Service/Building_a_RESTful_Web_Service.iml" />
       <module fileurl="file://$PROJECT_DIR$/Consuming_a_RESTful_Web_Service/Consuming_a_RESTful_Web_Service.iml" filepath="$PROJECT_DIR$/Consuming_a_RESTful_Web_Service/Consuming_a_RESTful_Web_Service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Messaging_with_JMS/Messaging_with_JMS.iml" filepath="$PROJECT_DIR$/Messaging_with_JMS/Messaging_with_JMS.iml" />
       <module fileurl="file://$PROJECT_DIR$/Messaging_with_Redis/Messaging_with_Redis.iml" filepath="$PROJECT_DIR$/Messaging_with_Redis/Messaging_with_Redis.iml" />
       <module fileurl="file://$PROJECT_DIR$/SchedulingTasks/SchedulingTasks.iml" filepath="$PROJECT_DIR$/SchedulingTasks/SchedulingTasks.iml" />
       <module fileurl="file://$PROJECT_DIR$/Uploading_Files/Uploading_Files.iml" filepath="$PROJECT_DIR$/Uploading_Files/Uploading_Files.iml" />
