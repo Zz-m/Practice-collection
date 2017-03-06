@@ -15,6 +15,7 @@
         <module name="Messaging_with_JMS" />
         <module name="Messaging_with_Redis" />
         <module name="SchedulingTasks" />
+        <module name="Securing_a_Web_Application" />
         <module name="Uploading_Files" />
         <module name="Validating_Form_Input" />
       </profile>
@@ -29,6 +30,7 @@
       <module name="Messaging_with_JMS" target="1.8" />
       <module name="Messaging_with_Redis" target="1.8" />
       <module name="SchedulingTasks" target="1.8" />
+      <module name="Securing_a_Web_Application" target="1.8" />
       <module name="Uploading_Files" target="1.8" />
       <module name="Validating_Form_Input" target="1.8" />
     </bytecodeTargetLevel>
