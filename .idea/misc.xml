@@ -12,6 +12,7 @@
         <option value="$PROJECT_DIR$/Uploading_Files/pom.xml" />
         <option value="$PROJECT_DIR$/Authenticating_a_User_with_LDAP/pom.xml" />
         <option value="$PROJECT_DIR$/Messaging_with_Redis/pom.xml" />
+        <option value="$PROJECT_DIR$/Validating_Form_Input/pom.xml" />
       </list>
     </option>
   </component>

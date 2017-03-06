@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/Messaging_with_Redis/Messaging_with_Redis.iml" filepath="$PROJECT_DIR$/Messaging_with_Redis/Messaging_with_Redis.iml" />
       <module fileurl="file://$PROJECT_DIR$/SchedulingTasks/SchedulingTasks.iml" filepath="$PROJECT_DIR$/SchedulingTasks/SchedulingTasks.iml" />
       <module fileurl="file://$PROJECT_DIR$/Uploading_Files/Uploading_Files.iml" filepath="$PROJECT_DIR$/Uploading_Files/Uploading_Files.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Validating_Form_Input/Validating_Form_Input.iml" filepath="$PROJECT_DIR$/Validating_Form_Input/Validating_Form_Input.iml" />
     </modules>
   </component>
 </project>

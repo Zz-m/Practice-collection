@@ -14,6 +14,7 @@
         <module name="Messaging_with_Redis" />
         <module name="SchedulingTasks" />
         <module name="Uploading_Files" />
+        <module name="Validating_Form_Input" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
@@ -25,6 +26,7 @@
       <module name="Messaging_with_Redis" target="1.8" />
       <module name="SchedulingTasks" target="1.8" />
       <module name="Uploading_Files" target="1.8" />
+      <module name="Validating_Form_Input" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
