@@ -18,6 +18,7 @@
         <option value="$PROJECT_DIR$/Securing_a_Web_Application/pom.xml" />
         <option value="$PROJECT_DIR$/Integrating_Data/pom.xml" />
         <option value="$PROJECT_DIR$/Caching_Data_with_GemFire/pom.xml" />
+        <option value="$PROJECT_DIR$/Managing_Transactions/pom.xml" />
       </list>
     </option>
   </component>

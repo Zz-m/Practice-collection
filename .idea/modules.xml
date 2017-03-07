@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/Consuming_a_RESTful_Web_Service/Consuming_a_RESTful_Web_Service.iml" filepath="$PROJECT_DIR$/Consuming_a_RESTful_Web_Service/Consuming_a_RESTful_Web_Service.iml" />
       <module fileurl="file://$PROJECT_DIR$/Creating_a_Batch_Service/Creating_a_Batch_Service.iml" filepath="$PROJECT_DIR$/Creating_a_Batch_Service/Creating_a_Batch_Service.iml" />
       <module fileurl="file://$PROJECT_DIR$/Integrating_Data/Integrating_Data.iml" filepath="$PROJECT_DIR$/Integrating_Data/Integrating_Data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Managing_Transactions/Managing_Transactions.iml" filepath="$PROJECT_DIR$/Managing_Transactions/Managing_Transactions.iml" />
       <module fileurl="file://$PROJECT_DIR$/Messaging_with_JMS/Messaging_with_JMS.iml" filepath="$PROJECT_DIR$/Messaging_with_JMS/Messaging_with_JMS.iml" />
       <module fileurl="file://$PROJECT_DIR$/Messaging_with_Redis/Messaging_with_Redis.iml" filepath="$PROJECT_DIR$/Messaging_with_Redis/Messaging_with_Redis.iml" />
       <module fileurl="file://$PROJECT_DIR$/SchedulingTasks/SchedulingTasks.iml" filepath="$PROJECT_DIR$/SchedulingTasks/SchedulingTasks.iml" />

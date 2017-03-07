@@ -14,6 +14,7 @@
         <module name="Consuming_a_RESTful_Web_Service" />
         <module name="Creating_a_Batch_Service" />
         <module name="Integrating_Data" />
+        <module name="Managing_Transactions" />
         <module name="Messaging_with_JMS" />
         <module name="Messaging_with_Redis" />
         <module name="SchedulingTasks" />
@@ -31,6 +32,7 @@
       <module name="Consuming_a_RESTful_Web_Service" target="1.8" />
       <module name="Creating_a_Batch_Service" target="1.8" />
       <module name="Integrating_Data" target="1.8" />
+      <module name="Managing_Transactions" target="1.8" />
       <module name="Messaging_with_JMS" target="1.8" />
       <module name="Messaging_with_Redis" target="1.8" />
       <module name="SchedulingTasks" target="1.8" />
