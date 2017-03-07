@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/Authenticating_a_User_with_LDAP/Authenticating_a_User_with_LDAP.iml" filepath="$PROJECT_DIR$/Authenticating_a_User_with_LDAP/Authenticating_a_User_with_LDAP.iml" />
       <module fileurl="file://$PROJECT_DIR$/Building_Java_Projects_with_Maven/Building_Java_Projects_with_Maven.iml" filepath="$PROJECT_DIR$/Building_Java_Projects_with_Maven/Building_Java_Projects_with_Maven.iml" />
       <module fileurl="file://$PROJECT_DIR$/Building_a_RESTful_Web_Service/Building_a_RESTful_Web_Service.iml" filepath="$PROJECT_DIR$/Building_a_RESTful_Web_Service/Building_a_RESTful_Web_Service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Caching_Data_with_GemFire/Caching_Data_with_GemFire.iml" filepath="$PROJECT_DIR$/Caching_Data_with_GemFire/Caching_Data_with_GemFire.iml" />
       <module fileurl="file://$PROJECT_DIR$/Consuming_a_RESTful_Web_Service/Consuming_a_RESTful_Web_Service.iml" filepath="$PROJECT_DIR$/Consuming_a_RESTful_Web_Service/Consuming_a_RESTful_Web_Service.iml" />
       <module fileurl="file://$PROJECT_DIR$/Creating_a_Batch_Service/Creating_a_Batch_Service.iml" filepath="$PROJECT_DIR$/Creating_a_Batch_Service/Creating_a_Batch_Service.iml" />
       <module fileurl="file://$PROJECT_DIR$/Integrating_Data/Integrating_Data.iml" filepath="$PROJECT_DIR$/Integrating_Data/Integrating_Data.iml" />

@@ -17,6 +17,7 @@
         <option value="$PROJECT_DIR$/Creating_a_Batch_Service/pom.xml" />
         <option value="$PROJECT_DIR$/Securing_a_Web_Application/pom.xml" />
         <option value="$PROJECT_DIR$/Integrating_Data/pom.xml" />
+        <option value="$PROJECT_DIR$/Caching_Data_with_GemFire/pom.xml" />
       </list>
     </option>
   </component>

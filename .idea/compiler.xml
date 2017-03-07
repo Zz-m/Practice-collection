@@ -10,6 +10,7 @@
         <module name="Authenticating_a_User_with_LDAP" />
         <module name="Building_a_RESTful_Web_Service" />
         <module name="Building_Java_Projects_with_Maven" />
+        <module name="Caching_Data_with_GemFire" />
         <module name="Consuming_a_RESTful_Web_Service" />
         <module name="Creating_a_Batch_Service" />
         <module name="Integrating_Data" />
@@ -26,6 +27,7 @@
       <module name="Authenticating_a_User_with_LDAP" target="1.8" />
       <module name="Building_a_RESTful_Web_Service" target="1.8" />
       <module name="Building_Java_Projects_with_Maven" target="1.5" />
+      <module name="Caching_Data_with_GemFire" target="1.8" />
       <module name="Consuming_a_RESTful_Web_Service" target="1.8" />
       <module name="Creating_a_Batch_Service" target="1.8" />
       <module name="Integrating_Data" target="1.8" />
