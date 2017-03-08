@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/Building_a_RESTful_Web_Service/Building_a_RESTful_Web_Service.iml" filepath="$PROJECT_DIR$/Building_a_RESTful_Web_Service/Building_a_RESTful_Web_Service.iml" />
       <module fileurl="file://$PROJECT_DIR$/Caching_Data_with_GemFire/Caching_Data_with_GemFire.iml" filepath="$PROJECT_DIR$/Caching_Data_with_GemFire/Caching_Data_with_GemFire.iml" />
       <module fileurl="file://$PROJECT_DIR$/Consuming_a_RESTful_Web_Service/Consuming_a_RESTful_Web_Service.iml" filepath="$PROJECT_DIR$/Consuming_a_RESTful_Web_Service/Consuming_a_RESTful_Web_Service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Creating_Asynchronous_Methods/Creating_Asynchronous_Methods.iml" filepath="$PROJECT_DIR$/Creating_Asynchronous_Methods/Creating_Asynchronous_Methods.iml" />
       <module fileurl="file://$PROJECT_DIR$/Creating_a_Batch_Service/Creating_a_Batch_Service.iml" filepath="$PROJECT_DIR$/Creating_a_Batch_Service/Creating_a_Batch_Service.iml" />
       <module fileurl="file://$PROJECT_DIR$/Integrating_Data/Integrating_Data.iml" filepath="$PROJECT_DIR$/Integrating_Data/Integrating_Data.iml" />
       <module fileurl="file://$PROJECT_DIR$/Managing_Transactions/Managing_Transactions.iml" filepath="$PROJECT_DIR$/Managing_Transactions/Managing_Transactions.iml" />
