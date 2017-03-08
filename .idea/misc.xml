@@ -19,6 +19,7 @@
         <option value="$PROJECT_DIR$/Integrating_Data/pom.xml" />
         <option value="$PROJECT_DIR$/Caching_Data_with_GemFire/pom.xml" />
         <option value="$PROJECT_DIR$/Managing_Transactions/pom.xml" />
+        <option value="$PROJECT_DIR$/Accessing_Data_with_JPA/pom.xml" />
       </list>
     </option>
   </component>

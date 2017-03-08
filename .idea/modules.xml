@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Accessing_Data_with_JPA/Accessing_Data_with_JPA.iml" filepath="$PROJECT_DIR$/Accessing_Data_with_JPA/Accessing_Data_with_JPA.iml" />
       <module fileurl="file://$PROJECT_DIR$/Accessing_Relational_Data_using_JDBC_with_Spring/Accessing_Relational_Data_using_JDBC_with_Spring.iml" filepath="$PROJECT_DIR$/Accessing_Relational_Data_using_JDBC_with_Spring/Accessing_Relational_Data_using_JDBC_with_Spring.iml" />
       <module fileurl="file://$PROJECT_DIR$/Authenticating_a_User_with_LDAP/Authenticating_a_User_with_LDAP.iml" filepath="$PROJECT_DIR$/Authenticating_a_User_with_LDAP/Authenticating_a_User_with_LDAP.iml" />
       <module fileurl="file://$PROJECT_DIR$/Building_Java_Projects_with_Maven/Building_Java_Projects_with_Maven.iml" filepath="$PROJECT_DIR$/Building_Java_Projects_with_Maven/Building_Java_Projects_with_Maven.iml" />
