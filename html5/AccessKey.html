@@ -1,0 +1,27 @@
+<!DOCYPE html>
+<html>
+    <head>
+        <title>Example</title>
+        <script>
+            var toggleHidden = function() {
+                var elem = document.getElementById("toggle")
+                if (elem.hasAttribute('hidden')){
+                    elem.removeAttribute("hidden")
+                } else {
+                    elem.setAttribute("hidden", "hidden")
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            Name:<input type="text" name="name" accesskey="n" tabindex="1"/>
+            <p/>
+            <span tabindex="5" id="toggle" draggable="true">password</span><input type="password" name="password" accesskey="p" tabindex="2"/>
+            <p/>
+            <input draggable="true" type="submit" value="Log In" accesskey="s" tabindex="3"/>
+            <p contenteditable="true">It is raining now</p>
+            <button onclick="toggleHidden()">Toggle</button>
+        </form>
+    </body>
+</html>
