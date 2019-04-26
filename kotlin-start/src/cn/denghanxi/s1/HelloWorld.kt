@@ -16,6 +16,10 @@ fun main() {
 
     println(Peter("as", 5).what)
     println(Petser("as", 5))
+
+    val sb: StringBuilder = java.lang.StringBuilder();
+    with(sb) {append("asd")}
+
 }
 
 fun max(a: Int, b: Int) = if (a > b) a else b
