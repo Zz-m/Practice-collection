@@ -89,14 +89,14 @@ void *Map_move(void *self, Direction direction) {
     return next;
 }
 
-int map_attack(void *self, int damage) {
+int Map_attack(void *self, int damage) {
     Map *map = self;
     Room *location = map->location;
 
     return location->_(attack)(location, damage);
 }
 
-int map_init(void *self) {
+int Map_init(void *self) {
     Map *map = self;
 
     Room *hall = NEW(Room, "The great Hall");
