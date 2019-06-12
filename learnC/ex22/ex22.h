@@ -8,6 +8,6 @@ void set_age(int age);
 
 double update_ratio(double ratio);
 
-void pirnt_size();
+void print_size();
 
 #endif
