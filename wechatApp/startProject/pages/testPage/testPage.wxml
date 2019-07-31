@@ -1,0 +1,4 @@
+<!--pages/testPage/testPage.wxml-->
+<text>Hello {{user.name}}</text>
+
+<button bindtap="changeName">click me</button>
