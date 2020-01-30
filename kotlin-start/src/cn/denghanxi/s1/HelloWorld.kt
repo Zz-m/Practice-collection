@@ -9,18 +9,13 @@ private class Peter(private val name: String, val age: Int) {
 
 class Petser(val name: String, val age: Int)
 
-fun main() {
-    println("hello world")
-    println(max(3, 5))
-//    val p1 = Peter("asd", 12)
-
-    println(Peter("as", 5).what)
-    println(Petser("as", 5))
-
-    val sb: StringBuilder = java.lang.StringBuilder();
-    with(sb) {append("asd")}
-
+fun main(args: Array<String>) {
+    val name = if (args.size > 0) args[0] else "Kotlin"
+    println("Hello, $name")
 }
 
 fun max(a: Int, b: Int) = if (a > b) a else b
 
+fun min(a: Int, b: Int): Int {
+    return if (a < b) a else b
+}
