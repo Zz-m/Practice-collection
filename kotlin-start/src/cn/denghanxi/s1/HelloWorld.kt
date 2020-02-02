@@ -1,8 +1,11 @@
 package cn.denghanxi.s1
 
+import cn.denghanxi.s2.createRandomRectangle
+
 private class Peter(private val name: String, val age: Int) {
     val what: Int
         get() {
+            val rec = createRandomRectangle()
             return 12
         }
 }
