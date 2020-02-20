@@ -17,6 +17,7 @@ val set = hashSetOf(1, 7, 53)
 val map = hashMapOf(1 to "one", 8 to "eight", 53 to "fifty-three")
 
 fun String.secondChar(): Char = this.get(1)
+fun String.thirdChar(): Char {return 'a'}
 
 fun <T> joinToString(
         collection: Collection<T>,
@@ -55,4 +56,5 @@ fun main() {
     val ss = "asdasd"
 
     ss.tell()
+    println(ss.thirdChar())
 }
