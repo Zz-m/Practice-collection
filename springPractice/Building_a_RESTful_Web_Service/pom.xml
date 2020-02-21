@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.adj</groupId>
     <artifactId>Building_a_RESTful_Web_Service</artifactId>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
     <version>0.1.0</version>
     <name>Building_a_RESTful_Web_Service Maven Webapp</name>
     <url>http://maven.apache.org</url>

@@ -2,22 +2,39 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/Accessing_Data_with_JPA" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Accessing_Data_with_JPA/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Accessing_Relational_Data_using_JDBC_with_Spring" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Accessing_Relational_Data_using_JDBC_with_Spring/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Authenticating_a_User_with_LDAP" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Authenticating_a_User_with_LDAP/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Building_a_RESTful_Web_Service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Building_a_RESTful_Web_Service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Caching_Data_with_GemFire" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Caching_Data_with_GemFire/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Consuming_a_RESTful_Web_Service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Consuming_a_RESTful_Web_Service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Creating_Asynchronous_Methods" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Creating_Asynchronous_Methods/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Creating_CRUD_UI_with_Vaadin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Creating_CRUD_UI_with_Vaadin/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Creating_a_Batch_Service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Creating_a_Batch_Service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Integrating_Data" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Integrating_Data/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Managing_Transactions" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Managing_Transactions/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Messaging_with_JMS" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Messaging_with_JMS/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Messaging_with_Redis" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SchedulingTasks" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SchedulingTasks/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Securing_a_Web_Application" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Securing_a_Web_Application/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Uploading_Files" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Uploading_Files/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Using_WebSocket_to_build_an_interactive_web_application" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Using_WebSocket_to_build_an_interactive_web_application/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Validating_Form_Input" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Validating_Form_Input/src/main/java" charset="UTF-8" />
   </component>
 </project>
