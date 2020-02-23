@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Building_a_RESTful_Web_Service:war">
+    <output-path>$PROJECT_DIR$/Building_a_RESTful_Web_Service/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>Building_a_RESTful_Web_Service</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="Building_a_RESTful_Web_Service-0.1.0.war">
+      <element id="artifact" artifact-name="Building_a_RESTful_Web_Service:war exploded" />
+    </root>
+  </artifact>
+</component>

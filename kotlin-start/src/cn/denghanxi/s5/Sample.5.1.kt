@@ -24,10 +24,27 @@ val sum = {
     x + y
 }
 
+fun tell(res: Collection<String>) {
+    var counter = Person("asd", 123)
+    object : Thread() {
+        override fun run() {
+            counter = Person("asd", 123)
+        }
+    }.start()
+    counter = Person("asd", 123)
+    res.forEach {counter = Person("asd", 123)}
+    counter = Person("asd", 123)
+    println(counter)
+}
+
 fun main() {
     val people = listOf(Person("Alice", 23), Person("Bob", 32))
     println(people.maxBy() { it.age })
     println(people.maxBy(Person::age))
     println(people.maxBy { s -> s.age })
     println(sum(12, 23))
+
+    tell(listOf("123", "123", "123"))
+
+
 }
