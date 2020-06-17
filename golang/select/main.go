@@ -12,15 +12,24 @@ func main() {
 		time.Sleep(4 * time.Second)
 		ch <- 2
 	}()
+	i := 0
+	go func() {
+		for {
+			fmt.Printf("timer: %v\n", i)
+			i++
+			time.Sleep(1 * time.Second)
+		}
+	}()
 	for {
 		select {
 		case <-time.After(3 * time.Second):
 			fmt.Println("case 1")
 		case <-time.After(4 * time.Second):
 			fmt.Println("case 2")
-			time.Sleep(12 * time.Second)
 		case i := <-ch:
 			fmt.Printf("get i %v \n", i)
+			time.Sleep(6 * time.Second)
+			fmt.Println("case 3 fnish")
 		}
 	}
 }
