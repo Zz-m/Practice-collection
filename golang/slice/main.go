@@ -4,24 +4,13 @@ import (
 	"fmt"
 )
 
-var a = make([]int, 7, 8)
-
-func Test(slice *[]int) {
-	*slice = append(*slice, 100)
-	fmt.Println(slice)
-}
-
-func myAppend(list *[]int, value int) {
-	*list = append(*list, value)
-}
-
 func main() {
-	sli := []int{}
-	fmt.Println(sli)
-	fmt.Printf("addr %p\n", &sli)
-	myAppend(&sli, 3)
+	sli := [3]int{}
+	sli[0] = 0
+	sli[1] = 1
+	sli[2] = 2
 
 	fmt.Println(sli)
 
-	fmt.Printf("addr %p\n", &sli)
+	fmt.Println(sli[1:2])
 }
