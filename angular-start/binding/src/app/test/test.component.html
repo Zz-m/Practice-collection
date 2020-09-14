@@ -1,0 +1,40 @@
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+        <p>Auto-resizing sidenav</p>
+        <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+        <button (click)="showFiller = !showFiller" mat-raised-button>
+            Toggle extra text
+        </button>
+    </mat-drawer>
+
+    <div class="example-sidenav-content">
+        <button type="button" mat-button (click)="drawer.toggle()">
+            Toggle sidenav
+        </button>
+
+        <h2>Welcome {{name}} {{endCode}} {{timer}}</h2>
+        <h2>{{2 + 2}}</h2>
+        <h2>{{name.length}}</h2>
+        <h2 [class]="successClass">{{name.toUpperCase()}}</h2>
+        <h2 class="text-special" class="text-danger">{{name.toUpperCase()}}</h2>
+        <h2 [class.text-danger]="hasError" [class.text-special]=hasError>Has Error</h2>
+        <mat-list>
+            <h2 [ngClass]="messageClass">Success Danger Special</h2>
+            <mat-divider></mat-divider>
+            <h2 [style.color]="styleColor">Style Binding</h2>
+            <mat-divider></mat-divider>
+            <h2>{{siteUrl}}</h2>
+            <mat-divider></mat-divider>
+            <p>double binding</p>
+            <input #appInput [(ngModel)]="name" type="text">
+            <button (click)="logInput(appInput.value)">App-Input</button>
+            <mat-divider></mat-divider>
+        </mat-list>
+        
+        <!-- <input [id]="myId" type="text" [value]="timer"> -->
+        <input [disabled]=false id={{myId}} type="text" value="Jim">
+        <button (click)="add1btnClick($event)">Add 1</button>
+    </div>
+
+
+</mat-drawer-container>
