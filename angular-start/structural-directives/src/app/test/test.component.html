@@ -1,0 +1,9 @@
+<h2 *ngIf="showName">{{parentData}}</h2>
+<h2 *ngIf="showName">{{parentData | uppercase}}</h2>
+<h2 *ngIf="showName">{{john|json}}</h2>
+<h2 *ngIf="!showName">Name is hidden</h2>
+
+<li *ngFor="let person of people">
+    {{person.name}}--{{person.age}}--{{person.addr}}
+</li>
+<button (click)="toggleNameBtnClick()">Toggle Name</button>

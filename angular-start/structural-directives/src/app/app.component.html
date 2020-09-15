@@ -1,0 +1,7 @@
+<h2>{{message}}</h2>
+<app-test (childEvent)="getMessage($event)" [parentData]=name></app-test>
+<app-test2></app-test2>
+
+<button (click)="parentClick()">Parent button</button>
+
+<router-outlet></router-outlet>
