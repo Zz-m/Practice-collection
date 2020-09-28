@@ -1,0 +1,60 @@
+package cn.denghanxi;
+
+import cn.denghanxi.data.DBUtil;
+import cn.denghanxi.data.Person;
+import cn.denghanxi.data.mapper.PersonJavaMapper;
+import cn.denghanxi.data.mapper.PersonMapper;
+import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.jdbc.ScriptRunner;
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.HashMap;
+import java.util.Map;
+
+public class CreateDatabaseTest {
+    private static SqlSessionFactory sqlSessionFactory;
+    @BeforeAll
+    static void beforeAll() throws IOException {
+        String resourcePath = "mybatis-config.xml";
+        InputStream inputStream = Resources.getResourceAsStream(resourcePath);
+        sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+        DBUtil.initDB(sqlSessionFactory);
+    }
+
+    @AfterAll
+    static void afterAll(){
+
+    }
+
+    @Test
+    void testCreate() {
+        try (SqlSession session = sqlSessionFactory.openSession()) {
+
+//            Person person = session.selectOne("cn.denghanxi.data.mapper.PersonMapper.selectPerson", 101);
+            Person jack = new Person("Jack", 12, "Tianjing");
+            PersonJavaMapper personJavaMapper = session.getMapper(PersonJavaMapper.class);
+
+//            personMapper.initDatabase();
+            personJavaMapper.save(jack);
+            Person person = personJavaMapper.getPersonByName("Jack");
+            System.out.println(person);
+            Person person1 = session.selectOne("cn.denghanxi.data.mapper.PersonMapper.selectPerson", 1);
+            System.out.println(person1);
+            Assertions.assertEquals("Jack", person1.getName());
+
+            PersonMapper personMapper = session.getMapper(PersonMapper.class);
+            Person person2 = personMapper.selectPerson(1L);
+            Assertions.assertEquals("Jack", person2.getName());
+            Assertions.assertEquals(jack.getAddress(), person2.getAddress());
+        }
+    }
+}
