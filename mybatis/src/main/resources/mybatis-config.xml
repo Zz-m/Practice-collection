@@ -9,10 +9,10 @@
         <environment id="development">
             <transactionManager type="JDBC"/>
             <dataSource type="POOLED">
-                <property name="driver" value="org.h2.Driver"/>
-                <property name="url" value="jdbc:h2:mem:test;DB_CLOSE_DELAY=-1"/>
-                <property name="username" value="sa"/>
-                <property name="password" value=""/>
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://192.168.1.199:3306/mybatis"/>
+                <property name="username" value="root"/>
+                <property name="password" value="888777999"/>
             </dataSource>
         </environment>
     </environments>

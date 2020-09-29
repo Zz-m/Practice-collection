@@ -13,6 +13,7 @@ public class DBUtil {
         scriptRunner.setStopOnError(true);
         try {
             scriptRunner.runScript(Resources.getResourceAsReader("schema.sql"));
+            scriptRunner.runScript(Resources.getResourceAsReader("data.sql"));
         } catch (IOException e) {
             e.printStackTrace();
         }

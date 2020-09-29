@@ -14,6 +14,8 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -22,6 +24,7 @@ import java.util.Map;
 
 public class CreateDatabaseTest {
     private static SqlSessionFactory sqlSessionFactory;
+    private static Logger logger = LoggerFactory.getLogger(CreateDatabaseTest.class);
     @BeforeAll
     static void beforeAll() throws IOException {
         String resourcePath = "mybatis-config.xml";
@@ -47,14 +50,15 @@ public class CreateDatabaseTest {
             personJavaMapper.save(jack);
             Person person = personJavaMapper.getPersonByName("Jack");
             System.out.println(person);
-            Person person1 = session.selectOne("cn.denghanxi.data.mapper.PersonMapper.selectPerson", 1);
+            Person person1 = session.selectOne("cn.denghanxi.data.mapper.PersonMapper.selectPerson", person.getId());
             System.out.println(person1);
             Assertions.assertEquals("Jack", person1.getName());
 
             PersonMapper personMapper = session.getMapper(PersonMapper.class);
-            Person person2 = personMapper.selectPerson(1L);
+            Person person2 = personMapper.selectPerson(person.getId());
             Assertions.assertEquals("Jack", person2.getName());
             Assertions.assertEquals(jack.getAddress(), person2.getAddress());
+            logger.error("Log test");
         }
     }
 }
