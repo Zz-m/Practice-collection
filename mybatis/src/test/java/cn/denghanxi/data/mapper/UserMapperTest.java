@@ -1,7 +1,9 @@
 package cn.denghanxi.data.mapper;
 
 import cn.denghanxi.data.DBUtil;
+import cn.denghanxi.model.SysRole;
 import cn.denghanxi.model.SysUser;
+import cn.denghanxi.model.SysUserRole;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -16,6 +18,7 @@ import java.io.InputStream;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class UserMapperTest extends BaseMapperTest {
     private static Logger logger = LoggerFactory.getLogger(UserMapperTest.class);
@@ -41,6 +44,18 @@ class UserMapperTest extends BaseMapperTest {
                 logger.debug(user.toString());
             }
             assertEquals(2, sysUsers.size());
+        }
+    }
+
+    @Test
+    void selectRolesByUserId() {
+        try(SqlSession sqlSession = getSqlSession()) {
+            UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+            List<SysRole> sysRoles = userMapper.selectRolesByUserId(1L);
+            for (SysRole sysRole :sysRoles) {
+                logger.debug(sysRole.toString());
+                assertTrue(sysRole.getRoleName().equals("管理员") || sysRole.getRoleName().equals("普通用户"));
+            }
         }
     }
 }
