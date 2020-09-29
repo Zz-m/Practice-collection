@@ -1,12 +1,10 @@
 package cn.denghanxi;
 
 import cn.denghanxi.data.DBUtil;
-import cn.denghanxi.data.Person;
+import cn.denghanxi.model.Person;
 import cn.denghanxi.data.mapper.PersonJavaMapper;
 import cn.denghanxi.data.mapper.PersonMapper;
-import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.io.Resources;
-import org.apache.ibatis.jdbc.ScriptRunner;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
@@ -19,8 +17,6 @@ import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.HashMap;
-import java.util.Map;
 
 public class CreateDatabaseTest {
     private static SqlSessionFactory sqlSessionFactory;

@@ -1,6 +1,6 @@
 package cn.denghanxi.data.mapper;
 
-import cn.denghanxi.data.Person;
+import cn.denghanxi.model.Person;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;

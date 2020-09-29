@@ -2,14 +2,14 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.denghanxi.data.mapper.PersonMapper">
-    <select id="selectPerson" resultType="cn.denghanxi.data.Person">
+    <select id="selectPerson" resultType="Person">
         select *
         from t_person
         where id = #{id}
         LIMIT 1
     </select>
 
-    <!--    <resultMap id="resultPerson" type="cn.denghanxi.data.Person">-->
+    <!--    <resultMap id="resultPerson" type="cn.denghanxi.model.Person">-->
     <!--        <result column="name" property="name"/>-->
     <!--        <result column="age" property="age"/>-->
     <!--        <result column="address" property="address"/>-->

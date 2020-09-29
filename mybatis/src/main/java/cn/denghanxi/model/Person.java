@@ -1,4 +1,4 @@
-package cn.denghanxi.data;
+package cn.denghanxi.model;
 
 import java.io.Serializable;
 

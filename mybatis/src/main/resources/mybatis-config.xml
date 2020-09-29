@@ -5,6 +5,9 @@
 <configuration>
     <properties>
     </properties>
+    <typeAliases>
+        <package name="cn.denghanxi.model"/>
+    </typeAliases>
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC"/>
