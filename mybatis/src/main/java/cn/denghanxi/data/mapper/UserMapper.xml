@@ -2,9 +2,19 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.denghanxi.data.mapper.UserMapper">
-    <select id="selectById" resultType="SysUser">
+    <select id="selectById" resultMap="SysUserResult">
         SELECT *
         FROM sys_user
         WHERE id = #{id};
     </select>
+
+    <resultMap id="SysUserResult" type="SysUser">
+        <result column="id" property="id"/>
+        <result column="user_name" property="userName"/>
+        <result column="user_password" property="userPassword"/>
+        <result column="user_email" property="userEmail"/>
+        <result column="user_info" property="userInfo"/>
+        <result column="user_img" property="userImg"/>
+        <result column="create_time" property="createTime"/>
+    </resultMap>
 </mapper>
