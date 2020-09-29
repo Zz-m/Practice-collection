@@ -8,6 +8,17 @@
         WHERE id = #{id};
     </select>
 
+    <select id="selectAll" resultType="SysUser">
+        SELECT id,
+               user_name,
+               user_password,
+               user_email,
+               user_info,
+               head_img,
+               create_time
+        FROM sys_user
+    </select>
+
     <resultMap id="SysUserResult" type="SysUser">
         <result column="id" property="id"/>
         <result column="user_name" property="userName"/>

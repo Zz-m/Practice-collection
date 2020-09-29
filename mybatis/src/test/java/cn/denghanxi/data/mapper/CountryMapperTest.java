@@ -32,7 +32,7 @@ class CountryMapperTest {
     @Test
     void simpleTest(){
         try (SqlSession sqlSession = sqlSessionFactory.openSession()) {
-            List<Country> countryList = sqlSession.selectList("selectAll");
+            List<Country> countryList = sqlSession.selectList("cn.denghanxi.data.mapper.CountryMapper.selectAll");
             for (Country country : countryList) {
                 System.out.println(country);
             }
