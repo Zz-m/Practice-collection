@@ -17,21 +17,13 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class UserMapperTest {
-    private static SqlSessionFactory sqlSessionFactory;
+class UserMapperTest extends BaseMapperTest {
     private static Logger logger = LoggerFactory.getLogger(UserMapperTest.class);
 
-    @BeforeAll
-    static void beforeAll() throws IOException {
-        String resourcePath = "mybatis-config.xml";
-        InputStream inputStream = Resources.getResourceAsStream(resourcePath);
-        sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
-        DBUtil.initDB(sqlSessionFactory);
-    }
 
     @Test
     void testSelectById() {
-        try (SqlSession sqlSession = sqlSessionFactory.openSession()) {
+        try (SqlSession sqlSession = getSqlSession()) {
             UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
             SysUser admin = userMapper.selectById(1L);
             logger.debug(admin.toString());
@@ -42,7 +34,7 @@ class UserMapperTest {
 
     @Test
     void selectAll() {
-        try (SqlSession sqlSession = sqlSessionFactory.openSession()) {
+        try (SqlSession sqlSession = getSqlSession()) {
             UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
             List<SysUser> sysUsers = userMapper.selectAll();
             for (SysUser user : sysUsers) {
