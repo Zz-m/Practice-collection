@@ -14,14 +14,14 @@ public class BaseMapperTest {
     private static SqlSessionFactory sqlSessionFactory;
 
     @BeforeAll
-    static void beforeAll() throws IOException {
+    static void baseBeforeAll() throws IOException {
         String resourcePath = "mybatis-config.xml";
         InputStream inputStream = Resources.getResourceAsStream(resourcePath);
         sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
         DBUtil.initDB(sqlSessionFactory);
     }
 
-    SqlSession getSqlSession() {
+    static SqlSession getSqlSession() {
         return sqlSessionFactory.openSession();
     }
 }

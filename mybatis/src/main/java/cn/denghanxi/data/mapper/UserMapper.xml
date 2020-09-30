@@ -8,6 +8,10 @@
         WHERE id = #{id};
     </select>
 
+    <select id="selectByName" resultType="SysUser">
+        SELECT * FROM sys_user WHERE user_name=#{name}
+    </select>
+
     <select id="selectAll" resultType="SysUser">
         SELECT id,
                user_name,
@@ -30,6 +34,12 @@
                  INNER JOIN sys_role r ON ur.role_id = r.id
         WHERE u.id = #{userId}
     </select>
+
+    <insert id="insertUser">
+        INSERT INTO `sys_user`(id, user_name, user_password, user_email, user_info, head_img, create_time)
+        VALUES (#{id}, #{userName}, #{userPassword}, #{userEmail}, #{userInfo}, #{headImg, jdbcType=BLOB},
+                #{createTime, jdbcType=TIMESTAMP})
+    </insert>
 
     <resultMap id="SysUserResult" type="SysUser">
         <result column="id" property="id"/>
