@@ -5,7 +5,7 @@ DROP TABLE IF EXISTS sys_role;
 DROP TABLE IF EXISTS sys_privilege;
 DROP TABLE IF EXISTS sys_user_role;
 DROP TABLE IF EXISTS sys_role_privilege;
-
+SET default_storage_engine=InnoDB;
 CREATE TABLE IF NOT EXISTS t_person
 (
     id      INTEGER PRIMARY KEY AUTO_INCREMENT,
