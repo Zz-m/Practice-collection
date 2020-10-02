@@ -161,4 +161,26 @@ class UserMapperTest extends BaseMapperTest {
         assertEquals(userMapper.deleteById(getUser), 1);
         assertNull(userMapper.selectById(sysUser.getId()));
     }
+
+    @Test
+    void selectRolesByUserIdAndRoleEnabled() {
+        List<SysRole> roleList = userMapper.selectRolesByUserIdAndRoleEnabled(1L, 1);
+        assertNotNull(roleList);
+        assertTrue(roleList.size() > 0);
+        for (SysRole role : roleList) {
+            logger.debug(role.toString());
+        }
+    }
+
+    @Test
+    void testCache(){
+        SysUser admin = userMapper.selectById(1L);
+        assertEquals(admin.getUserName(), "admin");
+        admin.setUserName("AAA");
+        SysUser admin2 = userMapper.selectById(1L);
+        assertEquals("AAA", admin2.getUserName());
+        assertEquals(admin, admin2);
+        //recover
+        admin.setUserName("admin");
+    }
 }
