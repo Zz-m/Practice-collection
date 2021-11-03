@@ -1,0 +1,27 @@
+From jetbrains/teamcity-agent:latest
+USER root
+
+ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+
+RUN apt-get update && \
+        apt-get install -y wget && \
+        apt-get install -y openjdk-11-jdk && \
+        update-java-alternatives --set /usr/lib/jvm/java-1.11.0-openjdk-amd64
+
+
+# download and install Android SDK
+# https://developer.android.com/studio#command-tools
+ARG ANDROID_SDK_VERSION=7302050
+ENV ANDROID_SDK_ROOT /opt/android-sdk
+RUN mkdir -p ${ANDROID_SDK_ROOT}/cmdline-tools && \
+    wget -q https://dl.google.com/android/repository/commandlinetools-linux-${ANDROID_SDK_VERSION}_latest.zip && \
+    unzip *tools*linux*.zip -d ${ANDROID_SDK_ROOT}/cmdline-tools && \
+    mv ${ANDROID_SDK_ROOT}/cmdline-tools/cmdline-tools ${ANDROID_SDK_ROOT}/cmdline-tools/tools && \
+    rm *tools*linux*.zip
+
+ENV PATH=$PATH:${ANDROID_SDK_ROOT}/cmdline-tools/tools/bin:$JAVA_HOME/bin
+
+RUN yes | sdkmanager "build-tools;30.0.3" "platform-tools" "platforms;android-30"
+
+
+USER buildagent
