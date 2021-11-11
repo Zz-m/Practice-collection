@@ -10,7 +10,6 @@ if (USE_MYMATH)
     message(WARNING "use my math lib")
     add_subdirectory(MathFunctions)
     list(APPEND EXTRA_LIBS MathFunctions)
-    list(APPEND EXTRA_INCLUDES "${PROJECT_SOURCE_DIR}/MathFunctions")
 else ()
     message(WARNING "use env lib")
 endif ()
@@ -23,7 +22,6 @@ configure_file(TutorialConfig2.h.in TutorialConfig.h)
 
 target_include_directories(app2 PUBLIC
         "${PROJECT_BINARY_DIR}"
-        ${EXTRA_INCLUDES}
         )
 
 
