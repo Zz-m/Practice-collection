@@ -1,8 +1,8 @@
 //
 // Created by dell on 2021/11/11.
 //
-#include <cmath>
 #include <iostream>
+#include "Table.h"
 
 // a hack square root calculation using simple operations
 double mysqrt(double x) {
@@ -10,12 +10,13 @@ double mysqrt(double x) {
         return 0;
     }
 
-#if defined(HAVE_LOG) && defined(HAVE_EXP)
-    double result = exp(log(x) * 0.5);
-  std::cout << "Computing sqrt of " << x << " to be " << result
-            << " using log and exp" << std::endl;
-#else
+    // use the table to help find an initial value
     double result = x;
+    if (x >= 1 && x < 10) {
+        std::cout << "Use the table to help find an initial value " << std::endl;
+        result = sqrtTable[static_cast<int>(x)];
+        std::cout << "table result: " << result << std::endl;
+    }
 
     // do ten iterations
     for (int i = 0; i < 10; ++i) {
@@ -27,6 +28,5 @@ double mysqrt(double x) {
         std::cout << "Computing sqrt of " << x << " to be " << result << std::endl;
     }
 
-#endif
     return result;
 }
