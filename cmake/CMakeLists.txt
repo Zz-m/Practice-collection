@@ -16,3 +16,5 @@ find_library(DHX_LIBRARY dhx_lib lib)
 
 target_link_libraries(cmake_testApp LINK_PUBLIC ${DHX_LIBRARY})
 #target_include_directories()
+
+add_subdirectory(test)

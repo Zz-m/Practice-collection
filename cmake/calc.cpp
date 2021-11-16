@@ -3,6 +3,4 @@
 //
 #include <iostream>
 
-//void speak(){
-//    std::cout << "hello from calc.cpp" << std::endl;
-//}
+int add_values (int a, int b) { return a+b;}
