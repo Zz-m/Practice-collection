@@ -27,7 +27,7 @@ int main(int argc, char *argv[]) {
 
     // calculate square root
 #ifdef USE_MYMATH
-    const double outputValue = mysqrt(inputValue);
+    const double outputValue = mathfunctions::sqrt(inputValue);
     std::cout << "use my lib." << std::endl;
 #else
     const double outputValue = sqrt(inputValue);

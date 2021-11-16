@@ -5,6 +5,10 @@
 #ifndef TUTORIAL_MATHFUNCTIONS_H
 #define TUTORIAL_MATHFUNCTIONS_H
 
-double mysqrt(double x);
+
+namespace mathfunctions {
+
+    double   sqrt(double x);
+}
 
 #endif //TUTORIAL_MATHFUNCTIONS_H
