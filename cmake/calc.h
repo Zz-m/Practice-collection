@@ -4,7 +4,7 @@
 
 #ifndef CMAKE_TEST_APP_CALC_H
 #define CMAKE_TEST_APP_CALC_H
-
-int add_values (int a, int b)
-
+namespace adj {
+    int add_values (int a, int b);
+}
 #endif //CMAKE_TEST_APP_CALC_H

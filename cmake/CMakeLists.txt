@@ -11,10 +11,3 @@ add_library(test_library STATIC calc.cpp)
 include_directories(includes/general)
 include_directories(includes/math)
 
-#find_library(TEST_LIBRARY test_library lib)
-find_library(DHX_LIBRARY dhx_lib lib)
-
-target_link_libraries(cmake_testApp LINK_PUBLIC ${DHX_LIBRARY})
-#target_include_directories()
-
-add_subdirectory(test)

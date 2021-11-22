@@ -1,10 +1,19 @@
 #include <iostream>
+#include <cmath>
 
-#include "dhx_lib.h"
 
 int main() {
-    std::cout << "hello" << std::endl;
 
-    speak();
+    bool b = true;
+    double d = 23.2;
+    d = sqrt(d);
+
+    using namespace std;
+    wcout << "hello \u00E2" << endl;
+
+    cout << "d: " << d << endl;
+
+    cout << "bool: " << b << endl;
+
     return 0;
 }
