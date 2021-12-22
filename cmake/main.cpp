@@ -1,19 +1,16 @@
 #include <iostream>
 #include <cmath>
+#include <string>
 
+
+int a = 123;
 
 int main() {
 
-    bool b = true;
-    double d = 23.2;
-    d = sqrt(d);
+    int a = 12;
 
-    using namespace std;
-    wcout << "hello \u00E2" << endl;
 
-    cout << "d: " << d << endl;
 
-    cout << "bool: " << b << endl;
 
     return 0;
 }
