@@ -1,6 +1,20 @@
-<div class="inventory-app">
-    <app-product-list
-        [products]=products
-        (onProductSelected)="productWasSelected($event)">
-    </app-product-list>
+<div class="ui raised segment">
+    <h2 class="ui header">
+        Demo Form: Sku
+    </h2>
+    <form #formObj="ngForm"
+          (ngSubmit)="onSubmit(formObj.value)"
+          class="ui form">
+        <div class="field">
+            <label for="skuInput">SKU</label>
+            <input type="text"
+                   id="skuInput"
+                   placeholder="SKU"
+                   name="sku" ngModel="ss">
+        </div>
+
+        <button type="submit" class="ui button">Submit</button>
+
+    </form>
+
 </div>
