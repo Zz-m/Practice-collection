@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {Product} from "./model/Product";
+import {AbstractControl, FormBuilder, FormGroup, Validators} from "@angular/forms";
 
 @Component({
     selector: 'inventory-app',
@@ -8,9 +9,14 @@ import {Product} from "./model/Product";
 })
 export class AppComponent {
     title = 'inventory-app';
+    myForm: FormGroup;
+    sku: AbstractControl
 
-    constructor() {
-
+    constructor(fb: FormBuilder) {
+        this.myForm = fb.group(
+            {'sku': ['', Validators.required]}
+        )
+        this.sku = this.myForm.controls['sku']
     }
 
 
