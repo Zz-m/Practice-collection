@@ -14,7 +14,7 @@ export class AppComponent {
 
     constructor(fb: FormBuilder) {
         this.myForm = fb.group(
-            {'sku': ['', Validators.required]}
+            {'sku': ['', Validators.maxLength(3)]}
         )
         this.sku = this.myForm.controls['sku']
     }
