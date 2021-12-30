@@ -7,13 +7,18 @@ import {RowItemComponent} from './component/row-item/row-item.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
-import { SimpleHttpComponent } from './component/simple-http/simple-http.component';
+import {SimpleHttpComponent} from './component/simple-http/simple-http.component';
 import {
     SearchBox,
     YoutubeSearchComponent,
     youTubeServiceInjectables
 } from './component/youtube-search/youtube-search.component';
 import {AppRoutingModule} from "./AppRoutingModule";
+import {MusicSearchComponent} from './pages/music-search/music-search.component';
+import {MusicArtistsComponent} from './pages/music-artists/music-artists.component';
+import {MusicAlbumsComponent} from './pages/music-albums/music-albums.component';
+import {MusicTracksComponent} from './pages/music-tracks/music-tracks.component';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
     declarations: [
@@ -21,7 +26,7 @@ import {AppRoutingModule} from "./AppRoutingModule";
         ProductListComponent,
         RowItemComponent,
         SimpleHttpComponent,
-        YoutubeSearchComponent,SearchBox
+        YoutubeSearchComponent, SearchBox, MusicSearchComponent, MusicArtistsComponent, MusicAlbumsComponent, MusicTracksComponent, LoginComponent
     ],
     imports: [
         BrowserModule,
