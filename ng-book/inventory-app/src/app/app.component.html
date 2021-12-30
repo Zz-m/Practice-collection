@@ -10,7 +10,7 @@
             <input type="text"
                    id="skuInput"
                    placeholder="SKU"
-                   [formControl]="$any(myForm).controls['sku']" >
+                   [formControl]="$any(myForm).controls['sku']">
 
             <div *ngIf="!sku.valid" class="ui error message">SKU is invalid</div>
         </div>
@@ -25,4 +25,13 @@
     <div *ngIf="!sku.valid" class="ui error message">SKU is invalid</div>
 </div>
 
-<app-simple-http></app-simple-http>
+<h1>Angular Router App</h1>
+<!-- This nav gives you links to click, which tells the router which route to use (defined in the routes constant in  AppRoutingModule) -->
+<nav>
+    <ul>
+        <li><a routerLink="youtube" routerLinkActive="active">youtube</a></li>
+        <li><a routerLink="simple-http/1" routerLinkActive="active">simple-http</a></li>
+    </ul>
+</nav>
+<!-- The routed views render in the <router-outlet>-->
+<router-outlet></router-outlet>

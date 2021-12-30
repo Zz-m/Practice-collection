@@ -13,7 +13,7 @@ import {
     YoutubeSearchComponent,
     youTubeServiceInjectables
 } from './component/youtube-search/youtube-search.component';
-import {RouterModule} from "@angular/router";
+import {AppRoutingModule} from "./AppRoutingModule";
 
 @NgModule({
     declarations: [
@@ -29,8 +29,7 @@ import {RouterModule} from "@angular/router";
         FormsModule,
         ReactiveFormsModule,
         HttpClientModule,
-        RouterModule,
-
+        AppRoutingModule
     ],
     providers: [
         youTubeServiceInjectables

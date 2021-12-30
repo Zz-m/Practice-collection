@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
+import {ActivatedRoute} from "@angular/router";
+import {query} from "@angular/animations";
 
 @Component({
     selector: 'app-simple-http',
@@ -10,7 +12,13 @@ export class SimpleHttpComponent implements OnInit {
     loading: boolean = false;
     data: object = {dhx: "asd"};
 
-    constructor(private httpClient: HttpClient) {
+    query: string = '';
+
+    constructor(private httpClient: HttpClient, private route: ActivatedRoute) {
+        route.params.subscribe(params => {
+            this.query = params['query'];
+            console.log("get param:", this.query)
+        })
     }
 
     ngOnInit(): void {
