@@ -4,7 +4,7 @@ import {SearchResult} from "../../model/SearchResult";
 import {Observable, fromEvent} from "rxjs";
 import {map, filter, debounceTime} from "rxjs/operators";
 
-export var YOUTUBE_API_KEY = 'AIzaSyDcLi3_nxlmHh_RdKZ4gajD5nJod1vVY_Y'
+export var YOUTUBE_API_KEY = 'asd'
 export var YOUTUBE_API_URL = 'https://www.googleapis.com/youtube/v3/search'
 
 let loadingGif: string = ((<any>window).__karma__) ? '' : ('images/loading.gif');
