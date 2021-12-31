@@ -18,7 +18,10 @@ import {MusicSearchComponent} from './pages/music-search/music-search.component'
 import {MusicArtistsComponent} from './pages/music-artists/music-artists.component';
 import {MusicAlbumsComponent} from './pages/music-albums/music-albums.component';
 import {MusicTracksComponent} from './pages/music-tracks/music-tracks.component';
-import { LoginComponent } from './pages/login/login.component';
+import {LoginComponent} from './pages/login/login.component';
+import {ProtectedComponent} from './component/protected/protected.component';
+import {AUTH_PROVIDERS} from "./service/auth.service";
+import {LOGGED_IN_GUARD_PROVIDERS} from "./guards/LoggedIn.guard";
 
 @NgModule({
     declarations: [
@@ -26,7 +29,14 @@ import { LoginComponent } from './pages/login/login.component';
         ProductListComponent,
         RowItemComponent,
         SimpleHttpComponent,
-        YoutubeSearchComponent, SearchBox, MusicSearchComponent, MusicArtistsComponent, MusicAlbumsComponent, MusicTracksComponent, LoginComponent
+        YoutubeSearchComponent,
+        SearchBox,
+        MusicSearchComponent,
+        MusicArtistsComponent,
+        MusicAlbumsComponent,
+        MusicTracksComponent,
+        LoginComponent,
+        ProtectedComponent
     ],
     imports: [
         BrowserModule,
@@ -37,7 +47,9 @@ import { LoginComponent } from './pages/login/login.component';
         AppRoutingModule
     ],
     providers: [
-        youTubeServiceInjectables
+        youTubeServiceInjectables,
+        AUTH_PROVIDERS,
+        LOGGED_IN_GUARD_PROVIDERS,
     ],
     bootstrap: [AppComponent]
 })

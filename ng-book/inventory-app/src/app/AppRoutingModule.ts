@@ -6,6 +6,8 @@ import {MusicSearchComponent} from "./pages/music-search/music-search.component"
 import {MusicArtistsComponent} from "./pages/music-artists/music-artists.component";
 import {MusicAlbumsComponent} from "./pages/music-albums/music-albums.component";
 import {MusicTracksComponent} from "./pages/music-tracks/music-tracks.component";
+import {ProtectedComponent} from "./component/protected/protected.component";
+import {LoggedInGuard} from "./guards/LoggedIn.guard";
 
 const routes: Routes = [
     {path: "", redirectTo: 'simple-http/asd', pathMatch: 'full'},
@@ -15,6 +17,7 @@ const routes: Routes = [
     {path: "artists/:id", component: MusicArtistsComponent},
     {path: "albums/:id", component: MusicAlbumsComponent},
     {path: "tracks/:id", component: MusicTracksComponent},
+    {path: "protected", component: ProtectedComponent, canActivate: [LoggedInGuard]},
 ];
 
 @NgModule(

@@ -32,7 +32,14 @@
         <li><a routerLink="youtube" routerLinkActive="active">youtube</a></li>
         <li><a routerLink="simple-http/1" routerLinkActive="active">simple-http</a></li>
         <li><a routerLink="search" routerLinkActive="active">Search</a></li>
+        <li><a routerLink="protected" routerLinkActive="active">Protected</a></li>
     </ul>
 </nav>
-<!-- The routed views render in the <router-outlet>-->
-<router-outlet></router-outlet>
+<div id="content">
+    <div class="container">
+        <app-login></app-login>
+        <hr>
+        <!-- The routed views render in the <router-outlet>-->
+        <router-outlet></router-outlet>
+    </div>
+</div>
