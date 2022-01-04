@@ -22,6 +22,8 @@ import {LoginComponent} from './pages/login/login.component';
 import {ProtectedComponent} from './component/protected/protected.component';
 import {AUTH_PROVIDERS} from "./service/auth.service";
 import {LOGGED_IN_GUARD_PROVIDERS} from "./guards/LoggedIn.guard";
+import { PopupDirective } from './component/popup/popup.directive';
+import { PopupComponent } from './component/popup/popup/popup.component';
 
 @NgModule({
     declarations: [
@@ -36,7 +38,9 @@ import {LOGGED_IN_GUARD_PROVIDERS} from "./guards/LoggedIn.guard";
         MusicAlbumsComponent,
         MusicTracksComponent,
         LoginComponent,
-        ProtectedComponent
+        ProtectedComponent,
+        PopupDirective,
+        PopupComponent
     ],
     imports: [
         BrowserModule,
