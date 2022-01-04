@@ -51,7 +51,8 @@ import {LOGGED_IN_GUARD_PROVIDERS} from "./guards/LoggedIn.guard";
         AUTH_PROVIDERS,
         LOGGED_IN_GUARD_PROVIDERS,
     ],
-    bootstrap: [AppComponent]
+    bootstrap: [AppComponent],
+    exports: []
 })
 export class AppModule {
 }

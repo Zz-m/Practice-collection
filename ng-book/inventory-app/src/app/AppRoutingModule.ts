@@ -20,11 +20,9 @@ const routes: Routes = [
     {path: "protected", component: ProtectedComponent, canActivate: [LoggedInGuard]},
 ];
 
-@NgModule(
-    {
-        imports: [RouterModule.forRoot(routes)],
-        exports: [RouterModule]
-    }
-)
+@NgModule({
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
+})
 export class AppRoutingModule {
 }
