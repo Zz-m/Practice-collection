@@ -24,6 +24,9 @@ import {AUTH_PROVIDERS} from "./service/auth.service";
 import {LOGGED_IN_GUARD_PROVIDERS} from "./guards/LoggedIn.guard";
 import { PopupDirective } from './component/popup/popup.directive';
 import { PopupComponent } from './component/popup/popup/popup.component';
+import { TabComponent } from './component/tab/tab/tab.component';
+import { TabsetComponent } from './component/tab/tabset/tabset.component';
+import { TabAppComponent } from './component/tab/tab-app/tab-app.component';
 
 @NgModule({
     declarations: [
@@ -40,7 +43,10 @@ import { PopupComponent } from './component/popup/popup/popup.component';
         LoginComponent,
         ProtectedComponent,
         PopupDirective,
-        PopupComponent
+        PopupComponent,
+        TabComponent,
+        TabsetComponent,
+        TabAppComponent
     ],
     imports: [
         BrowserModule,
