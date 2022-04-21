@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="56e7f63a-2fac-4bb6-b60e-cf1dcabe2cf4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../grpc-client/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../grpc-client/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../grpc-client/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../grpc-client/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../grpc-client/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../grpc-client/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../grpc-client/src/main/java/cn/denghanxi/grpc_client/AppClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../grpc-client/target/classes/cn/denghanxi/grpc_client/AppClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/proto/Hello.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Hello.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/denghanxi/grpc/helloworld/GreeterGrpc$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/denghanxi/grpc/helloworld/GreeterGrpc$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/denghanxi/grpc/helloworld/GreeterGrpc$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/denghanxi/grpc/helloworld/GreeterGrpc$GreeterBaseDescriptorSupplier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/denghanxi/grpc/helloworld/GreeterGrpc$GreeterBlockingStub.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/denghanxi/grpc/helloworld/GreeterGrpc$GreeterFileDescriptorSupplier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/denghanxi/grpc/helloworld/GreeterGrpc$GreeterFutureStub.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/denghanxi/grpc/helloworld/GreeterGrpc$GreeterImplBase.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/denghanxi/grpc/helloworld/GreeterGrpc$GreeterMethodDescriptorSupplier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/denghanxi/grpc/helloworld/GreeterGrpc$GreeterStub.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/denghanxi/grpc/helloworld/GreeterGrpc$MethodHandlers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/denghanxi/grpc/helloworld/GreeterGrpc.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/denghanxi/grpc/helloworld/HelloProto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/denghanxi/grpc/helloworld/HelloReply$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/denghanxi/grpc/helloworld/HelloReply$Builder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/denghanxi/grpc/helloworld/HelloReply.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/denghanxi/grpc/helloworld/HelloReplyOrBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/denghanxi/grpc/helloworld/HelloRequest$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/denghanxi/grpc/helloworld/HelloRequest$Builder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/denghanxi/grpc/helloworld/HelloRequest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/cn/denghanxi/grpc/helloworld/HelloRequestOrBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/grpc-java/cn/denghanxi/grpc/helloworld/GreeterGrpc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/cn/denghanxi/grpc/helloworld/HelloProto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/cn/denghanxi/grpc/helloworld/HelloReply.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/cn/denghanxi/grpc/helloworld/HelloReplyOrBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/cn/denghanxi/grpc/helloworld/HelloRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/cn/denghanxi/grpc/helloworld/HelloRequestOrBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/grpc-proto-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/1cae955e92a4ce133746c0e03cf31e1c/google/protobuf/any.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/1cae955e92a4ce133746c0e03cf31e1c/google/protobuf/api.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/1cae955e92a4ce133746c0e03cf31e1c/google/protobuf/compiler/plugin.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/1cae955e92a4ce133746c0e03cf31e1c/google/protobuf/descriptor.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/1cae955e92a4ce133746c0e03cf31e1c/google/protobuf/duration.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/1cae955e92a4ce133746c0e03cf31e1c/google/protobuf/empty.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/1cae955e92a4ce133746c0e03cf31e1c/google/protobuf/field_mask.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/1cae955e92a4ce133746c0e03cf31e1c/google/protobuf/source_context.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/1cae955e92a4ce133746c0e03cf31e1c/google/protobuf/struct.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/1cae955e92a4ce133746c0e03cf31e1c/google/protobuf/timestamp.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/1cae955e92a4ce133746c0e03cf31e1c/google/protobuf/type.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/1cae955e92a4ce133746c0e03cf31e1c/google/protobuf/wrappers.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/api/annotations.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/api/auth.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/api/backend.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/api/billing.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/api/client.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/api/config_change.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/api/consumer.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/api/context.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/api/control.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/api/distribution.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/api/documentation.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/api/endpoint.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/api/field_behavior.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/api/http.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/api/httpbody.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/api/label.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/api/launch_stage.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/api/log.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/api/logging.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/api/metric.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/api/monitored_resource.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/api/monitoring.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/api/quota.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/api/resource.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/api/service.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/api/source_info.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/api/system_parameter.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/api/usage.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/cloud/audit/audit_log.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/geo/type/viewport.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/logging/type/http_request.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/logging/type/log_severity.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/longrunning/operations.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/rpc/code.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/rpc/context/attribute_context.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/rpc/error_details.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/rpc/status.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/type/calendar_period.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/type/color.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/type/date.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/type/datetime.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/type/dayofweek.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/type/expr.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/type/fraction.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/type/latlng.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/type/money.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/type/postal_address.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/type/quaternion.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-dependencies/c06c209f732b86b4dd372f589af83ad0/google/type/timeofday.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-plugins/protoc-3.19.2-windows-x86_64.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/protoc-plugins/protoc-gen-grpc-java-1.45.1-windows-x86_64.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../grpc-server/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../grpc-server/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../grpc-server/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../grpc-server/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../grpc-server/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../grpc-server/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../grpc-server/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../grpc-server/src/main/java/cn/denghanxi/grpc_server/AppServer.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="283VYglg7OvQD6TVlrPoeXDeFov" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/dell/project/Practice-collection/grpc/grpc-proto/src/main"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dell\project\Practice-collection\grpc\grpc-proto\src\main" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="56e7f63a-2fac-4bb6-b60e-cf1dcabe2cf4" name="Changes" comment="" />
+      <created>1650445305793</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1650445305793</updated>
+      <workItem from="1650445307098" duration="1000000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
