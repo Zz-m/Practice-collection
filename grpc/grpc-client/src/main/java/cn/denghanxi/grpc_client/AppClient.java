@@ -45,20 +45,6 @@ public class AppClient {
         String user = "dhx";
         // Access a service running on the local machine on port 50051
         String target = "localhost:50051";
-        // Allow passing in the user and target strings as command line arguments
-        if (args.length > 0) {
-            if ("--help".equals(args[0])) {
-                System.err.println("Usage: [name [target]]");
-                System.err.println("");
-                System.err.println("  name    The name you wish to be greeted by. Defaults to " + user);
-                System.err.println("  target  The server to connect to. Defaults to " + target);
-                System.exit(1);
-            }
-            user = args[0];
-        }
-        if (args.length > 1) {
-            target = args[1];
-        }
 
         // Create a communication channel to the server, known as a Channel. Channels are thread-safe
         // and reusable. It is common to create channels at the beginning of your application and reuse
