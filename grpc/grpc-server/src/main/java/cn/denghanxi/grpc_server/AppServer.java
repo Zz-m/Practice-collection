@@ -3,11 +3,17 @@ package cn.denghanxi.grpc_server;
 import cn.denghanxi.grpc.helloworld.GreeterGrpc;
 import cn.denghanxi.grpc.helloworld.HelloReply;
 import cn.denghanxi.grpc.helloworld.HelloRequest;
+import cn.denghanxi.grpc.proto.time.TimerServiceGrpc;
+import com.google.protobuf.Empty;
+import com.google.protobuf.Timestamp;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import io.grpc.stub.StreamObserver;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.ZoneOffset;
+import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -22,6 +28,7 @@ public class AppServer {
         int port = 50051;
         server = ServerBuilder.forPort(port)
                 .addService(new GreeterImpl())
+                .addService(new TimeServiceImpl())
                 .build()
                 .start();
         System.out.println("Server started, listening on " + port);
@@ -66,6 +73,20 @@ public class AppServer {
         public void sayHello(HelloRequest request, StreamObserver<HelloReply> responseObserver) {
             HelloReply reply = HelloReply.newBuilder().setMessage(request.getName() + " hello from server.").build();
             responseObserver.onNext(reply);
+            responseObserver.onCompleted();
+        }
+    }
+
+    static class TimeServiceImpl extends TimerServiceGrpc.TimerServiceImplBase {
+        @Override
+        public void whatTimeIsIt(Empty request, StreamObserver<Timestamp> responseObserver) {
+            LocalDateTime now = LocalDateTime.now();
+
+            Timestamp timestamp = Timestamp.newBuilder()
+                    .setSeconds(now.toEpochSecond(ZoneOffset.UTC))
+                    .setNanos(now.getNano())
+                    .build();
+            responseObserver.onNext(timestamp);
             responseObserver.onCompleted();
         }
     }

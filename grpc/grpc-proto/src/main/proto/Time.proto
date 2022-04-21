@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "cn.denghanxi.grpc.proto.time";
+option java_outer_classname = "TimeProto";
+option objc_class_prefix = "HLW";
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+
+service TimerService{
+  rpc whatTimeIsIt(google.protobuf.Empty) returns (google.protobuf.Timestamp) {}
+}
+enum Class {
+  HIGH = 0;
+}
+
