@@ -6,6 +6,7 @@ export class Product {
         public imagUrl: string,
         public department: string[],
         public price: number,
+        public time: number,
     ) {
 
     }
