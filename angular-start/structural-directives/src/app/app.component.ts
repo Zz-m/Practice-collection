@@ -13,6 +13,7 @@ export class AppComponent {
 
   parentClick(){
     console.log("name:" + this.name)
+    console.log("name:" + this.name + "123")
     console.log("message:" + this.message)
   }
 
