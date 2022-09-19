@@ -14,7 +14,7 @@ fun getShippingCostCalculator(delivery: Delivery): (Order) -> Double {
     if (delivery == Delivery.STANDARD) {
         return { order -> order.name.length + 12.2 }
     } else {
-        return { order -> order.name.length - 1.0 }
+        return { order -> order.name.length - 1.2 }
     }
 }
 
