@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bce8a51f-4829-497b-be75-48b453615888" name="Default Changelist" comment="CH 2">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/adj/ch3/Ch3_1.java" afterDir="false" />
+    <list default="true" id="bce8a51f-4829-497b-be75-48b453615888" name="Default Changelist" comment="CH 3">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/adj/ch4/Ch4_1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -130,20 +130,7 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Ch3_1">
-    <configuration name="Ch2_15" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.adj.ch2.Ch2_15" />
-      <module name="rxJava" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.adj.ch2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Ch4_1">
     <configuration name="Ch2_31" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.adj.ch2.Ch2_31" />
       <module name="rxJava" />
@@ -196,8 +183,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Ch4_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.adj.ch4.Ch4_1" />
+      <module name="rxJava" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.adj.ch4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.Ch2_15" />
+      <item itemvalue="Application.Ch4_1" />
       <item itemvalue="Application.Ch2_31" />
       <item itemvalue="Application.Ch3_1" />
       <item itemvalue="Application.Ch3_1 (1)" />
@@ -205,11 +205,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Ch4_1" />
         <item itemvalue="Application.Ch3_1" />
         <item itemvalue="Application.Ch3_1 (2)" />
         <item itemvalue="Application.Ch3_1 (1)" />
         <item itemvalue="Application.Ch2_31" />
-        <item itemvalue="Application.Ch2_15" />
       </list>
     </recent_temporary>
   </component>
@@ -226,7 +226,7 @@
       <updated>1561875756427</updated>
       <workItem from="1561875759206" duration="3074000" />
       <workItem from="1666228372076" duration="35989000" />
-      <workItem from="1666668456586" duration="20505000" />
+      <workItem from="1666668456586" duration="33273000" />
     </task>
     <task id="LOCAL-00001" summary="rxJava 没找到书">
       <created>1561884532819</created>
@@ -256,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666601953279</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="CH 3">
+      <created>1666920360136</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1666920360136</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -312,7 +319,8 @@
     <MESSAGE value="升级到rxjava3" />
     <MESSAGE value="CH 1" />
     <MESSAGE value="CH 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="CH 2" />
+    <MESSAGE value="CH 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="CH 3" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pom.xml">
