@@ -4,8 +4,17 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bce8a51f-4829-497b-be75-48b453615888" name="Default Changelist" comment="CH 3">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/adj/ch4/Ch4_1.java" afterDir="false" />
+    <list default="true" id="bce8a51f-4829-497b-be75-48b453615888" name="Default Changelist" comment="CH 4">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/adj/ch5/Ch5_03.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/adj/ch5/Ch5_07.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/adj/ch5/Ch5_09.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/adj/ch5/Ch5_1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/adj/ch5/Ch5_10.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/adj/ch5/Ch5_11.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/adj/ch5/Ch5_14.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/adj/ch5/Ch5_15.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/adj/ch5/Ch5_20.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/adj/ch5/Ch5_21.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -130,13 +139,13 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Ch4_1">
-    <configuration name="Ch2_31" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.adj.ch2.Ch2_31" />
+  <component name="RunManager" selected="Application.Ch5_21">
+    <configuration name="Ch5_11" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.adj.ch5.Ch5_11" />
       <module name="rxJava" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.adj.ch2.*" />
+          <option name="PATTERN" value="com.adj.ch5.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -144,12 +153,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Ch3_1 (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.adj.ch3.Ch3_1" />
+    <configuration name="Ch5_14" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.adj.ch5.Ch5_14" />
       <module name="rxJava" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.adj.ch3.*" />
+          <option name="PATTERN" value="com.adj.ch5.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -157,12 +166,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Ch3_1 (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.adj.ch3.Ch3_1" />
+    <configuration name="Ch5_15" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.adj.ch5.Ch5_15" />
       <module name="rxJava" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.adj.ch3.*" />
+          <option name="PATTERN" value="com.adj.ch5.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -170,12 +179,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Ch3_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.adj.ch3.Ch3_1" />
+    <configuration name="Ch5_20" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.adj.ch5.Ch5_20" />
       <module name="rxJava" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.adj.ch3.*" />
+          <option name="PATTERN" value="com.adj.ch5.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -183,12 +192,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Ch4_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.adj.ch4.Ch4_1" />
+    <configuration name="Ch5_21" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.adj.ch5.Ch5_21" />
       <module name="rxJava" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.adj.ch4.*" />
+          <option name="PATTERN" value="com.adj.ch5.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -197,19 +206,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Ch4_1" />
-      <item itemvalue="Application.Ch2_31" />
-      <item itemvalue="Application.Ch3_1" />
-      <item itemvalue="Application.Ch3_1 (1)" />
-      <item itemvalue="Application.Ch3_1 (2)" />
+      <item itemvalue="Application.Ch5_11" />
+      <item itemvalue="Application.Ch5_14" />
+      <item itemvalue="Application.Ch5_15" />
+      <item itemvalue="Application.Ch5_20" />
+      <item itemvalue="Application.Ch5_21" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Ch4_1" />
-        <item itemvalue="Application.Ch3_1" />
-        <item itemvalue="Application.Ch3_1 (2)" />
-        <item itemvalue="Application.Ch3_1 (1)" />
-        <item itemvalue="Application.Ch2_31" />
+        <item itemvalue="Application.Ch5_21" />
+        <item itemvalue="Application.Ch5_20" />
+        <item itemvalue="Application.Ch5_15" />
+        <item itemvalue="Application.Ch5_14" />
+        <item itemvalue="Application.Ch5_11" />
       </list>
     </recent_temporary>
   </component>
@@ -226,7 +235,8 @@
       <updated>1561875756427</updated>
       <workItem from="1561875759206" duration="3074000" />
       <workItem from="1666228372076" duration="35989000" />
-      <workItem from="1666668456586" duration="33273000" />
+      <workItem from="1666668456586" duration="37734000" />
+      <workItem from="1667266819172" duration="12708000" />
     </task>
     <task id="LOCAL-00001" summary="rxJava 没找到书">
       <created>1561884532819</created>
@@ -263,7 +273,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666920360136</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="CH 4">
+      <created>1667203971220</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1667203971220</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -320,7 +337,8 @@
     <MESSAGE value="CH 1" />
     <MESSAGE value="CH 2" />
     <MESSAGE value="CH 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="CH 3" />
+    <MESSAGE value="CH 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="CH 4" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pom.xml">
