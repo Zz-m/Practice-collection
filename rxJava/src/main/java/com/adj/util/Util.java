@@ -17,4 +17,9 @@ public class Util {
             System.out.println("Thread " + Thread.currentThread().getName() + " is interrupted.");
         }
     }
+
+    public static int randomSleepTime(int boundary) {
+        assert (boundary > 0);
+        return ThreadLocalRandom.current().nextInt(boundary);
+    }
 }

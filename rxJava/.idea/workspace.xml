@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bce8a51f-4829-497b-be75-48b453615888" name="Default Changelist" comment="CH 5">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/adj/ch6/Ch6_02.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/adj/ch6/Ch6_03.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/adj/ch6/Ch6_08.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/adj/ch6/Ch6_14.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/adj/ch6/Ch6_20.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/adj/util/Util.java" afterDir="false" />
+    <list default="true" id="bce8a51f-4829-497b-be75-48b453615888" name="Default Changelist" comment="CH 6">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/adj/ch7/Ch7_01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/adj/ch7/Ch7_14.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adj/util/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/adj/util/Util.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,33 +132,7 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Ch6_20">
-    <configuration name="Ch6_02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.adj.ch6.Ch6_02" />
-      <module name="rxJava" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.adj.ch6.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Ch6_03" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.adj.ch6.Ch6_03" />
-      <module name="rxJava" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.adj.ch6.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Ch7_14">
     <configuration name="Ch6_08" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.adj.ch6.Ch6_08" />
       <module name="rxJava" />
@@ -201,20 +172,46 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Ch7_01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.adj.ch7.Ch7_01" />
+      <module name="rxJava" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.adj.ch7.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Ch7_14" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.adj.ch7.Ch7_14" />
+      <module name="rxJava" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.adj.ch7.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.Ch6_02" />
-      <item itemvalue="Application.Ch6_03" />
+      <item itemvalue="Application.Ch7_14" />
       <item itemvalue="Application.Ch6_08" />
       <item itemvalue="Application.Ch6_14" />
       <item itemvalue="Application.Ch6_20" />
+      <item itemvalue="Application.Ch7_01" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Ch7_14" />
+        <item itemvalue="Application.Ch7_01" />
         <item itemvalue="Application.Ch6_20" />
         <item itemvalue="Application.Ch6_14" />
         <item itemvalue="Application.Ch6_08" />
-        <item itemvalue="Application.Ch6_03" />
-        <item itemvalue="Application.Ch6_02" />
       </list>
     </recent_temporary>
   </component>
@@ -232,7 +229,8 @@
       <workItem from="1561875759206" duration="3074000" />
       <workItem from="1666228372076" duration="35989000" />
       <workItem from="1666668456586" duration="37734000" />
-      <workItem from="1667266819172" duration="22246000" />
+      <workItem from="1667266819172" duration="24398000" />
+      <workItem from="1667436378810" duration="3486000" />
     </task>
     <task id="LOCAL-00001" summary="rxJava 没找到书">
       <created>1561884532819</created>
@@ -283,7 +281,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667292585819</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="CH 6">
+      <created>1667378960242</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1667378960242</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -342,7 +347,8 @@
     <MESSAGE value="CH 3" />
     <MESSAGE value="CH 4" />
     <MESSAGE value="CH 5" />
-    <option name="LAST_COMMIT_MESSAGE" value="CH 5" />
+    <MESSAGE value="CH 6" />
+    <option name="LAST_COMMIT_MESSAGE" value="CH 6" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pom.xml">
