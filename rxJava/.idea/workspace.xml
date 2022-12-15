@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bce8a51f-4829-497b-be75-48b453615888" name="Default Changelist" comment="whatever">
+    <list default="true" id="bce8a51f-4829-497b-be75-48b453615888" name="Default Changelist" comment="stackoverflow https://stackoverflow.com/questions/74720155/observable-is-unicast-by-definition-but-why-it-seem-multicast-with-asynchronous/74806529#74806529">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/adj/Test2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/adj/Test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/adj/Test1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,20 +131,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Test1">
-    <configuration name="Ch8_01 (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.adj.ch8.Ch8_01" />
-      <module name="rxJava" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.adj.ch8.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Test2">
     <configuration name="Ch8_10" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.adj.ch8.Ch8_10" />
       <module name="rxJava" />
@@ -197,20 +184,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Test2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.adj.Test2" />
+      <module name="rxJava" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.adj.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
+      <item itemvalue="Application.Test2" />
       <item itemvalue="Application.Test1" />
-      <item itemvalue="Application.Ch8_01 (1)" />
       <item itemvalue="Application.Ch8_10" />
       <item itemvalue="Application.Ch8_11" />
       <item itemvalue="Application.Ch9_01" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Test2" />
         <item itemvalue="Application.Test1" />
         <item itemvalue="Application.Ch9_01" />
         <item itemvalue="Application.Ch8_11" />
         <item itemvalue="Application.Ch8_10" />
-        <item itemvalue="Application.Ch8_01 (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -232,7 +232,7 @@
       <workItem from="1667436378810" duration="13707000" />
       <workItem from="1667965342373" duration="1444000" />
       <workItem from="1669279552683" duration="280000" />
-      <workItem from="1671068631319" duration="6821000" />
+      <workItem from="1671068631319" duration="10245000" />
     </task>
     <task id="LOCAL-00001" summary="rxJava 没找到书">
       <created>1561884532819</created>
@@ -325,7 +325,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671068669541</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="stackoverflow https://stackoverflow.com/questions/74720155/observable-is-unicast-by-definition-but-why-it-seem-multicast-with-asynchronous/74806529#74806529">
+      <created>1671088233854</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1671088233854</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -390,7 +397,8 @@
     <MESSAGE value="CH 9" />
     <MESSAGE value="asd" />
     <MESSAGE value="whatever" />
-    <option name="LAST_COMMIT_MESSAGE" value="whatever" />
+    <MESSAGE value="stackoverflow https://stackoverflow.com/questions/74720155/observable-is-unicast-by-definition-but-why-it-seem-multicast-with-asynchronous/74806529#74806529" />
+    <option name="LAST_COMMIT_MESSAGE" value="stackoverflow https://stackoverflow.com/questions/74720155/observable-is-unicast-by-definition-but-why-it-seem-multicast-with-asynchronous/74806529#74806529" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pom.xml">
