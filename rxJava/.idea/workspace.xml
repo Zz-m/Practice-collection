@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bce8a51f-4829-497b-be75-48b453615888" name="Default Changelist" comment="stackoverflow https://stackoverflow.com/questions/74066934/observable-forking-with-rxjava/74808972#74808972">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/adj/Test3.java" afterDir="false" />
+    <list default="true" id="bce8a51f-4829-497b-be75-48b453615888" name="Default Changelist" comment="stackoverflow https://stackoverflow.com/questions/73866212/switch-back-to-original-thread-after-executing-element-of-a-chain/74809391#74809391">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/adj/CRC16.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/adj/CRC16_Util.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -119,25 +120,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/adj/project/Practice-collection/rxJava",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/adj/project/Practice-collection/rxJava&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Application.Test3">
-    <configuration name="Ch8_11" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.adj.ch8.Ch8_11" />
+}</component>
+  <component name="RunManager" selected="Application.CRC16_Util">
+    <configuration name="CRC16" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.adj.CRC16" />
       <module name="rxJava" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.adj.ch8.*" />
+          <option name="PATTERN" value="com.adj.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -145,12 +146,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Ch9_01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.adj.ch9.Ch9_01" />
+    <configuration name="CRC16_Util" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.adj.CRC16_Util" />
       <module name="rxJava" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.adj.ch9.*" />
+          <option name="PATTERN" value="com.adj.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -198,19 +199,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.CRC16" />
+      <item itemvalue="Application.CRC16_Util" />
       <item itemvalue="Application.Test2" />
       <item itemvalue="Application.Test3" />
       <item itemvalue="Application.Test1" />
-      <item itemvalue="Application.Ch8_11" />
-      <item itemvalue="Application.Ch9_01" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CRC16_Util" />
+        <item itemvalue="Application.CRC16" />
         <item itemvalue="Application.Test3" />
         <item itemvalue="Application.Test2" />
         <item itemvalue="Application.Test1" />
-        <item itemvalue="Application.Ch9_01" />
-        <item itemvalue="Application.Ch8_11" />
       </list>
     </recent_temporary>
   </component>
@@ -233,6 +234,8 @@
       <workItem from="1667965342373" duration="1444000" />
       <workItem from="1669279552683" duration="280000" />
       <workItem from="1671068631319" duration="11426000" />
+      <workItem from="1672795054256" duration="224000" />
+      <workItem from="1678688001836" duration="3360000" />
     </task>
     <task id="LOCAL-00001" summary="rxJava 没找到书">
       <created>1561884532819</created>
