@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bce8a51f-4829-497b-be75-48b453615888" name="Default Changelist" comment="stackoverflow https://stackoverflow.com/questions/73866212/switch-back-to-original-thread-after-executing-element-of-a-chain/74809391#74809391">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/adj/CRC16.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/adj/CRC16_Util.java" afterDir="false" />
+    <list default="true" id="bce8a51f-4829-497b-be75-48b453615888" name="Default Changelist" comment="add crc implementation">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/adj/ByteBufferTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/adj/ByteUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/adj/DecodeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/adj/DecodeTest2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -120,22 +123,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/adj/project/Practice-collection/rxJava&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/adj/project/Practice-collection/rxJava/src/main/java/com/adj",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Application.CRC16_Util">
-    <configuration name="CRC16" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.adj.CRC16" />
-      <module name="rxJava" />
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\adj\project\Practice-collection\rxJava\src\main\java\com\adj" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.adj" />
+      <recent name="com.adj.wave" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.DecodeTest2 (4)">
+    <configuration name="DecodeTest2 (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.adj.DecodeTest2" />
+      <module name="rx-java-practice" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.adj.*" />
@@ -146,9 +160,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CRC16_Util" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.adj.CRC16_Util" />
-      <module name="rxJava" />
+    <configuration name="DecodeTest2 (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.adj.DecodeTest2" />
+      <module name="rx-java-practice" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.adj.*" />
@@ -159,9 +173,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.adj.Test1" />
-      <module name="rxJava" />
+    <configuration name="DecodeTest2 (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.adj.DecodeTest2" />
+      <module name="rx-java-practice" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.adj.*" />
@@ -172,9 +186,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.adj.Test2" />
-      <module name="rxJava" />
+    <configuration name="DecodeTest2 (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.adj.DecodeTest2" />
+      <module name="rx-java-practice" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.adj.*" />
@@ -185,9 +199,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.adj.Test3" />
-      <module name="rxJava" />
+    <configuration name="DecodeTest2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.adj.DecodeTest2" />
+      <module name="rx-java-practice" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.adj.*" />
@@ -199,19 +213,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.CRC16" />
-      <item itemvalue="Application.CRC16_Util" />
-      <item itemvalue="Application.Test2" />
-      <item itemvalue="Application.Test3" />
-      <item itemvalue="Application.Test1" />
+      <item itemvalue="Application.DecodeTest2" />
+      <item itemvalue="Application.DecodeTest2 (1)" />
+      <item itemvalue="Application.DecodeTest2 (2)" />
+      <item itemvalue="Application.DecodeTest2 (3)" />
+      <item itemvalue="Application.DecodeTest2 (4)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CRC16_Util" />
-        <item itemvalue="Application.CRC16" />
-        <item itemvalue="Application.Test3" />
-        <item itemvalue="Application.Test2" />
-        <item itemvalue="Application.Test1" />
+        <item itemvalue="Application.DecodeTest2 (4)" />
+        <item itemvalue="Application.DecodeTest2 (3)" />
+        <item itemvalue="Application.DecodeTest2 (2)" />
+        <item itemvalue="Application.DecodeTest2" />
+        <item itemvalue="Application.DecodeTest2 (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -235,7 +249,8 @@
       <workItem from="1669279552683" duration="280000" />
       <workItem from="1671068631319" duration="11426000" />
       <workItem from="1672795054256" duration="224000" />
-      <workItem from="1678688001836" duration="3360000" />
+      <workItem from="1678688001836" duration="3386000" />
+      <workItem from="1680161535234" duration="26386000" />
     </task>
     <task id="LOCAL-00001" summary="rxJava 没找到书">
       <created>1561884532819</created>
@@ -342,7 +357,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671095145235</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="add crc implementation">
+      <created>1678697607638</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1678697607638</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -409,7 +431,24 @@
     <MESSAGE value="whatever" />
     <MESSAGE value="stackoverflow https://stackoverflow.com/questions/74720155/observable-is-unicast-by-definition-but-why-it-seem-multicast-with-asynchronous/74806529#74806529" />
     <MESSAGE value="stackoverflow https://stackoverflow.com/questions/74066934/observable-forking-with-rxjava/74808972#74808972" />
-    <option name="LAST_COMMIT_MESSAGE" value="stackoverflow https://stackoverflow.com/questions/74066934/observable-forking-with-rxjava/74808972#74808972" />
+    <MESSAGE value="add crc implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="add crc implementation" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/adj/DecodeTest.java</url>
+          <line>69</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/adj/DecodeTest2.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pom.xml">
