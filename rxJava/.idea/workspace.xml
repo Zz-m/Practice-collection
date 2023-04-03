@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bce8a51f-4829-497b-be75-48b453615888" name="Default Changelist" comment="add crc implementation">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/adj/ByteBufferTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/adj/ByteUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/adj/DecodeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/adj/DecodeTest2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="bce8a51f-4829-497b-be75-48b453615888" name="Default Changelist" comment="test encode and decode">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/adj/terminal/TerminalMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/adj/terminal/TerminalMessageCodec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/adj/terminal/TerminalMessageType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adj/DecodeTest2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/adj/DecodeTest2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +127,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/adj/project/Practice-collection/rxJava/src/main/java/com/adj",
+    "last_opened_file_path": "C:/Users/adj/project/Practice-collection/rxJava/src/main/java/com/adj/terminal",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -139,6 +138,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\adj\project\Practice-collection\rxJava\src\main\java\com\adj\terminal" />
       <recent name="C:\Users\adj\project\Practice-collection\rxJava\src\main\java\com\adj" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -146,7 +146,7 @@
       <recent name="com.adj.wave" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DecodeTest2 (4)">
+  <component name="RunManager" selected="Application.DecodeTest2 (2)">
     <configuration name="DecodeTest2 (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.adj.DecodeTest2" />
       <module name="rx-java-practice" />
@@ -173,7 +173,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DecodeTest2 (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="DecodeTest2 (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.adj.DecodeTest2" />
       <module name="rx-java-practice" />
       <extension name="coverage">
@@ -186,7 +186,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DecodeTest2 (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="DecodeTest2 (5)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.adj.DecodeTest2" />
       <module name="rx-java-practice" />
       <extension name="coverage">
@@ -216,16 +216,16 @@
       <item itemvalue="Application.DecodeTest2" />
       <item itemvalue="Application.DecodeTest2 (1)" />
       <item itemvalue="Application.DecodeTest2 (2)" />
-      <item itemvalue="Application.DecodeTest2 (3)" />
       <item itemvalue="Application.DecodeTest2 (4)" />
+      <item itemvalue="Application.DecodeTest2 (5)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DecodeTest2 (4)" />
-        <item itemvalue="Application.DecodeTest2 (3)" />
         <item itemvalue="Application.DecodeTest2 (2)" />
         <item itemvalue="Application.DecodeTest2" />
         <item itemvalue="Application.DecodeTest2 (1)" />
+        <item itemvalue="Application.DecodeTest2 (5)" />
+        <item itemvalue="Application.DecodeTest2 (4)" />
       </list>
     </recent_temporary>
   </component>
@@ -250,7 +250,7 @@
       <workItem from="1671068631319" duration="11426000" />
       <workItem from="1672795054256" duration="224000" />
       <workItem from="1678688001836" duration="3386000" />
-      <workItem from="1680161535234" duration="26386000" />
+      <workItem from="1680161535234" duration="32597000" />
     </task>
     <task id="LOCAL-00001" summary="rxJava 没找到书">
       <created>1561884532819</created>
@@ -364,7 +364,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678697607638</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="test encode and decode">
+      <created>1680244816859</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1680244816859</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -432,7 +439,8 @@
     <MESSAGE value="stackoverflow https://stackoverflow.com/questions/74720155/observable-is-unicast-by-definition-but-why-it-seem-multicast-with-asynchronous/74806529#74806529" />
     <MESSAGE value="stackoverflow https://stackoverflow.com/questions/74066934/observable-forking-with-rxjava/74808972#74808972" />
     <MESSAGE value="add crc implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="add crc implementation" />
+    <MESSAGE value="test encode and decode" />
+    <option name="LAST_COMMIT_MESSAGE" value="test encode and decode" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -444,11 +452,22 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/adj/DecodeTest2.java</url>
-          <line>66</line>
-          <option name="timeStamp" value="2" />
+          <line>95</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/adj/DecodeTest2.java</url>
+          <line>130</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="inBuffer.remaining()" language="JAVA" />
+        <watch expression="inBuffer" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pom.xml">

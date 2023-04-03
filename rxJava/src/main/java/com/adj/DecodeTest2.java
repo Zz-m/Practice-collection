@@ -1,5 +1,8 @@
 package com.adj;
 
+import com.adj.terminal.TerminalMessage;
+import com.adj.terminal.TerminalMessageCodec;
+
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
@@ -7,22 +10,51 @@ import java.util.Random;
 
 public class DecodeTest2 {
 
+    private static byte[] testData = {16, 0, 0, 0, 1, 0, 1, 0, 3, 1, 14, 0, 0, 13, 8, 0, 2, 5, 7, 0, 0, 2, 13, 0, 2, 11, 11, 0, 0, 0, 9, 0, 0, 0, 0, 0, 0, 2, 14, 0, 0, 2, 6, 0, 2, 3, 14, 0, 3, 11, 0, 0, 0, 0, 0, 0, 0, 1, 2, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 14, 0, 9, 9, 17};
+
+    private static byte[] testData2 = {16, 0, 0, 0, 1, 0, 1, 0, 3, 1, 14, 0, 0, 13, 11, 0, 2, 4, 15, 0, 0, 2, 10, 0, 2, 10, 1, 0, 0, 0, 9, 0, 0, 0, 0, 0, 0, 2, 14, 0, 0, 2, 5, 0, 1, 13, 14, 0, 3, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    private static byte[] testData3 = {0, 2, 0, 0, 0, 0, 0, 3, 4, 11, 12, 17};
+
     public static void main(String[] args) {
         TransportEncoder encoder = new TransportEncoder();
         TransportDecoder decoder = new TransportDecoder();
-        byte[] in = new byte[10];
-        for (int i= 0; i < 10; i++) {
-            in[i] = (byte) (Math.random() * 100);
+
+        TerminalMessageCodec codec = new TerminalMessageCodec();
+//        byte[] in = new byte[10];
+//        for (int i= 0; i < 10; i++) {
+//            in[i] = (byte) (Math.random() * 100);
+//        }
+//        for (byte b : in) {
+//            System.out.print(" " + b);
+//        }
+//        System.out.println();
+//        byte[] out = decoder.decode(encoder.encode(in));
+//        for (byte b : out) {
+//            System.out.print(" " + b);
+//        }
+//        System.out.println();
+        byte[] out = decoder.decode(testData2);
+        if (out != null) {
+            for (byte b : out) {
+                System.out.print(" " + b);
+            }
+        } else {
+            System.out.println("data1 out null");
         }
-        for (byte b : in) {
-            System.out.print(" " + b);
+        byte[] out2 = decoder.decode(testData3);
+        if (out2 != null) {
+            for (byte b : out2) {
+                System.out.print(" " + b);
+            }
+        } else {
+            System.out.println("data2 out null");
         }
-        System.out.println();
-        byte[] out = decoder.decode(encoder.encode(in));
-        for (byte b : out) {
-            System.out.print(" " + b);
-        }
-        System.out.println();
+
+//        System.out.println();
+//
+//        TerminalMessage message = codec.bytesToMessage(out);
+//
+//        System.out.println(message);
     }
 
     private final static class TransportEncoder {
@@ -90,8 +122,10 @@ public class DecodeTest2 {
                 }
 
                 if (inBuffer.remaining() == 0) {
+                    System.out.println(inBuffer);
+                    inBuffer.compact();
                     inBuffer.put(b1);
-                    break;
+                    return null;
                 }
 
                 byte b2 = inBuffer.get();
