@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bce8a51f-4829-497b-be75-48b453615888" name="Default Changelist" comment="chore">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/adj/util/SleepAiderDataUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -144,20 +143,7 @@
       <recent name="com.adj.wave" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SleepAiderDataUtil">
-    <configuration name="DateTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.adj.date.DateTest" />
-      <module name="rx-java-practice" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.adj.date.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Test4">
     <configuration name="Hello" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.adj.Hello" />
       <module name="rx-java-practice" />
@@ -210,20 +196,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Test4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.adj.Test4" />
+      <module name="rx-java-practice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.adj.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.LogDataTest" />
       <item itemvalue="Application.LogDataTest (1)" />
       <item itemvalue="Application.SleepAiderDataUtil" />
+      <item itemvalue="Application.Test4" />
       <item itemvalue="Application.Hello" />
-      <item itemvalue="Application.DateTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Test4" />
         <item itemvalue="Application.SleepAiderDataUtil" />
         <item itemvalue="Application.LogDataTest" />
         <item itemvalue="Application.LogDataTest (1)" />
         <item itemvalue="Application.Hello" />
-        <item itemvalue="Application.DateTest" />
       </list>
     </recent_temporary>
   </component>
@@ -252,7 +251,7 @@
       <workItem from="1681175428465" duration="2137000" />
       <workItem from="1681179474744" duration="1013000" />
       <workItem from="1682319156631" duration="363000" />
-      <workItem from="1689556850827" duration="16961000" />
+      <workItem from="1689556850827" duration="18338000" />
     </task>
     <task id="LOCAL-00001" summary="rxJava 没找到书">
       <created>1561884532819</created>
@@ -426,7 +425,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689663779834</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="chore">
+      <option name="closed" value="true" />
+      <created>1689737461584</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1689737461584</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
