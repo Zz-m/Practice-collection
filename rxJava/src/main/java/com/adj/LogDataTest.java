@@ -70,7 +70,7 @@ public class LogDataTest {
 
         long numberOfTheory = testDuration.getSeconds() * 128;
         System.out.println("理论数据量： " + numberOfTheory + "条，" + " 实际数据量： " + counter + "条.");
-        System.out.println("丢包率： " + new DecimalFormat("#0.00").format((1 - ((double) counter) / ((double) numberOfTheory)) * 100) + "%");
+        System.out.println("估算丢包率： " + new DecimalFormat("#0.00").format((1 - ((double) counter) / ((double) numberOfTheory)) * 100) + "%");
         System.out.println("最大无数据时长：" + max_width + "毫秒");
         System.out.println("不合格记录数(大于2秒无数据)： " + widthRecordList.size());
 
