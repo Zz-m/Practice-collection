@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bce8a51f-4829-497b-be75-48b453615888" name="Default Changelist" comment="chore">
+      <change afterPath="$PROJECT_DIR$/.idea/rxJava.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/adj/DistinctTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/adj/LogDataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/adj/LogDataTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +52,9 @@
       <select />
     </treeState>
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
   <component name="ProjectConfigurationFiles">
     <option name="files">
       <list>
@@ -123,6 +128,7 @@
   "keyToString": {
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/adj/project/Practice-collection/rxJava/src/main/java/com/adj/util",
     "node.js.detected.package.eslint": "true",
@@ -144,9 +150,9 @@
       <recent name="com.adj.wave" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.LogDataTest">
-    <configuration name="Hello" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.adj.Hello" />
+  <component name="RunManager" selected="Application.DistinctTest">
+    <configuration name="DistinctTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.adj.DistinctTest" />
       <module name="rx-java-practice" />
       <extension name="coverage">
         <pattern>
@@ -211,19 +217,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.DistinctTest" />
       <item itemvalue="Application.LogDataTest" />
       <item itemvalue="Application.LogDataTest (1)" />
       <item itemvalue="Application.SleepAiderDataUtil" />
       <item itemvalue="Application.Test4" />
-      <item itemvalue="Application.Hello" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DistinctTest" />
         <item itemvalue="Application.LogDataTest" />
         <item itemvalue="Application.Test4" />
         <item itemvalue="Application.SleepAiderDataUtil" />
         <item itemvalue="Application.LogDataTest (1)" />
-        <item itemvalue="Application.Hello" />
       </list>
     </recent_temporary>
   </component>
@@ -252,7 +258,8 @@
       <workItem from="1681175428465" duration="2137000" />
       <workItem from="1681179474744" duration="1013000" />
       <workItem from="1682319156631" duration="363000" />
-      <workItem from="1689556850827" duration="19934000" />
+      <workItem from="1689556850827" duration="24031000" />
+      <workItem from="1691463085308" duration="1663000" />
     </task>
     <task id="LOCAL-00001" summary="rxJava 没找到书">
       <created>1561884532819</created>
@@ -442,7 +449,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689752608828</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="chore">
+      <option name="closed" value="true" />
+      <created>1689820748565</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1689820748565</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
