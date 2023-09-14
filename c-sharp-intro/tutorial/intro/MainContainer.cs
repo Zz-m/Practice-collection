@@ -8,15 +8,18 @@ class MainContainer
     {
         Console.WriteLine("Hello world.");
 
-        var generator = new PointFactory(12);
+        PointFactory generator = new(12);
 
         foreach (var point in generator.CreatePoints())
         {
             Console.WriteLine(point);
         }
         
-        Divide(10, 3, out int quo, out int rem);
+        Divide(10, 3, out var quo, out int rem);
         Console.WriteLine(quo + " rem: " + rem);
+
+        Point pp = new Point(12, 22);
+        
     }
 
     static void Divide(int x, int y, out int quotient, out int remainder)
@@ -28,7 +31,7 @@ class MainContainer
 
 public class Point
 {
-    public int X { get; }
+    public int X { get; set; }
     public int Y { get; }
 
     public Point(int x, int y) => (X, Y) = (x, y);
