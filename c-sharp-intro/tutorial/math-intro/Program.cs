@@ -36,16 +36,24 @@ namespace math_intro
 
     interface II1
     {
-        
+        void Speak();
     }
 
     interface II2
     {
-        
+        int Speak();
     }
 
     class Whatever : II1, II2
     {
-        
+        public void Speak()
+        {
+            throw new NotImplementedException();
+        }
+
+        int II2.Speak()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
