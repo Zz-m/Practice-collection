@@ -19,6 +19,10 @@ namespace math_intro
             var (age, name) = whatever;
             Console.WriteLine(age);
             Console.WriteLine(name);
+            
+            Console.WriteLine(p1.NickName);
+            p1.NickName = "asd";
+            Console.WriteLine(p1.NickName);
         }
     }
 
@@ -27,10 +31,13 @@ namespace math_intro
         private readonly int _age;
         private readonly string _name;
 
+        public string NickName { get; set; }
+
         public Person(int age, string name)
         {
             _age = age;
             this._name = name;
+            NickName = "default";
         }
 
         public override string ToString()
@@ -51,12 +58,12 @@ namespace math_intro
 
     class Whatever : II1, II2
     {
-        public void Speak()
+        void II1.Speak()
         {
             throw new NotImplementedException();
         }
 
-        int II2.Speak()
+        public int Speak()
         {
             throw new NotImplementedException();
         }
