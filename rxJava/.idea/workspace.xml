@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bce8a51f-4829-497b-be75-48b453615888" name="Default Changelist" comment="chore">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/adj/Test5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/adj/Test6.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -127,6 +127,7 @@
   "keyToString": {
     "Application.Test1.executor": "Run",
     "Application.Test5.executor": "Run",
+    "Application.Test6.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
@@ -153,22 +154,9 @@
       <recent name="com.adj.wave" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Test5">
+  <component name="RunManager" selected="Application.Test6">
     <configuration name="DistinctTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.adj.DistinctTest" />
-      <module name="rx-java-practice" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.adj.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LogDataTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.adj.LogDataTest" />
       <module name="rx-java-practice" />
       <extension name="coverage">
         <pattern>
@@ -219,20 +207,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Test6" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.adj.Test6" />
+      <module name="rx-java-practice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.adj.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
+      <item itemvalue="Application.Test6" />
       <item itemvalue="Application.Test5" />
       <item itemvalue="Application.Test1" />
       <item itemvalue="Application.DistinctTest" />
-      <item itemvalue="Application.LogDataTest" />
       <item itemvalue="Application.Test4" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Test6" />
         <item itemvalue="Application.Test5" />
         <item itemvalue="Application.Test1" />
         <item itemvalue="Application.Test4" />
         <item itemvalue="Application.DistinctTest" />
-        <item itemvalue="Application.LogDataTest" />
       </list>
     </recent_temporary>
   </component>
@@ -267,7 +268,8 @@
       <workItem from="1695029479862" duration="6000" />
       <workItem from="1700119587368" duration="6787000" />
       <workItem from="1701156262725" duration="3377000" />
-      <workItem from="1701410945230" duration="951000" />
+      <workItem from="1701410945230" duration="962000" />
+      <workItem from="1704679087861" duration="1902000" />
     </task>
     <task id="LOCAL-00001" summary="rxJava 没找到书">
       <created>1561884532819</created>
@@ -481,7 +483,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701163830614</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="chore">
+      <option name="closed" value="true" />
+      <created>1701412002072</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1701412002072</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
