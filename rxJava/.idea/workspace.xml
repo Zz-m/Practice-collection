@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bce8a51f-4829-497b-be75-48b453615888" name="Default Changelist" comment="chore">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/adj/Test6.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="bce8a51f-4829-497b-be75-48b453615888" name="Default Changelist" comment="chore" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -269,7 +266,7 @@
       <workItem from="1700119587368" duration="6787000" />
       <workItem from="1701156262725" duration="3377000" />
       <workItem from="1701410945230" duration="962000" />
-      <workItem from="1704679087861" duration="1902000" />
+      <workItem from="1704679087861" duration="2134000" />
     </task>
     <task id="LOCAL-00001" summary="rxJava 没找到书">
       <created>1561884532819</created>
@@ -491,7 +488,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701412002072</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="chore">
+      <option name="closed" value="true" />
+      <created>1704681216018</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1704681216018</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
