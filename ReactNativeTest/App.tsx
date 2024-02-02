@@ -5,7 +5,7 @@
  * @format
  */
 
-import React from 'react';
+import * as React from 'react';
 import type { PropsWithChildren } from 'react';
 import {
   Alert,
@@ -21,6 +21,8 @@ import {
   View,
 } from 'react-native';
 
+import { NavigationContainer } from '@react-navigation/native';
+
 import {
   Colors,
   DebugInstructions,
@@ -28,6 +30,45 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+
+const Stack = createNativeStackNavigator();
+
+const MyStack = () => {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Home"
+          component={App}
+          options={{title: 'Welcome'}}
+        />
+        <Stack.Screen name="Profile" component={ProfileScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
+
+
+interface Props {
+  navigation: any;
+  route:any;
+}
+
+const HomeScreen = ({navigation}: Props) => {
+  return (
+    <Button
+      title="Go to Jane's profile"
+      onPress={() =>
+        navigation.navigate('Profile', {name: 'Jane'})
+      }
+    />
+  );
+};
+const ProfileScreen = ({navigation, route}:Props) => {
+  return <Text>This is {route.params.name}'s profile</Text>;
+};
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -63,12 +104,17 @@ function Section({ children, title }: SectionProps): React.JSX.Element {
   );
 }
 
-function App(): React.JSX.Element {
+
+function App({navigation}: Props): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
+
+  function toDetail() {
+    navigation.navigate('Profile', {name: 'Jane'})
+  }
 
   return (
     <SafeAreaView style={[backgroundStyle,]}>
@@ -89,7 +135,7 @@ function App(): React.JSX.Element {
             <Button onPress={
               () => {
                 console.log('You tapped the button!');
-                _onPressButton();
+                toDetail();
               }}
               title='Press me!' />
           </View>
@@ -161,4 +207,5 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+// export default App;
+export default MyStack;
