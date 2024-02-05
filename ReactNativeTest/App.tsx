@@ -5,10 +5,9 @@
  * @format
  */
 
+import type {PropsWithChildren} from 'react';
 import * as React from 'react';
-import type { PropsWithChildren } from 'react';
 import {
-  Alert,
   Button,
   Image,
   ImageBackground,
@@ -21,17 +20,15 @@ import {
   View,
 } from 'react-native';
 
-import { NavigationContainer } from '@react-navigation/native';
+import {NavigationContainer} from '@react-navigation/native';
 
 import {
   Colors,
   DebugInstructions,
   Header,
-  LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 const Stack = createNativeStackNavigator();
 
@@ -50,23 +47,12 @@ const MyStack = () => {
   );
 };
 
-
 interface Props {
   navigation: any;
-  route:any;
+  route: any;
 }
 
-const HomeScreen = ({navigation}: Props) => {
-  return (
-    <Button
-      title="Go to Jane's profile"
-      onPress={() =>
-        navigation.navigate('Profile', {name: 'Jane'})
-      }
-    />
-  );
-};
-const ProfileScreen = ({navigation, route}:Props) => {
+const ProfileScreen = ({route}: Props) => {
   return <Text>This is {route.params.name}'s profile</Text>;
 };
 
@@ -74,11 +60,7 @@ type SectionProps = PropsWithChildren<{
   title: string;
 }>;
 
-function _onPressButton() {
-  Alert.alert("You press the button!");
-}
-
-function Section({ children, title }: SectionProps): React.JSX.Element {
+function Section({children, title}: SectionProps): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
   return (
     <View style={styles.sectionContainer}>
@@ -104,7 +86,6 @@ function Section({ children, title }: SectionProps): React.JSX.Element {
   );
 }
 
-
 function App({navigation}: Props): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
 
@@ -113,11 +94,11 @@ function App({navigation}: Props): React.JSX.Element {
   };
 
   function toDetail() {
-    navigation.navigate('Profile', {name: 'Jane'})
+    navigation.navigate('Profile', {name: 'Jane'});
   }
 
   return (
-    <SafeAreaView style={[backgroundStyle,]}>
+    <SafeAreaView style={[backgroundStyle]}>
       <StatusBar
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
@@ -130,37 +111,61 @@ function App({navigation}: Props): React.JSX.Element {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
-
           <View style={[styles.nav_button_container]}>
-            <Button onPress={
-              () => {
+            <Button
+              onPress={() => {
                 console.log('You tapped the button!');
                 toDetail();
               }}
-              title='Press me!' />
+              title="Press me!"
+            />
           </View>
 
           <Section title="Step One or More!">
-            Edit <Text style={[styles.highlight, styles.red]}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
+            Edit <Text style={[styles.highlight, styles.red]}>App.tsx</Text> to
+            change this screen and then come back to see your edits.
           </Section>
           <Section title="See Your Changes">
             <ReloadInstructions />
           </Section>
 
-
-          <View style={[styles.container, { flexDirection: 'column', height: 200, backgroundColor: 'powderblue' }]}>
-            <View style={{ flex: 1, backgroundColor: 'red', width: 10, alignSelf: 'center' }} />
-            <View style={{ flex: 2, backgroundColor: 'darkorange', width: 20 }} />
-            <View style={{ flex: 3, backgroundColor: 'green', width: 30 }} />
+          <View
+            style={[
+              styles.container,
+              {
+                flexDirection: 'column',
+                height: 200,
+                backgroundColor: 'powderblue',
+              },
+            ]}>
+            <View
+              style={{
+                flex: 1,
+                backgroundColor: 'red',
+                width: 10,
+                alignSelf: 'center',
+              }}
+            />
+            <View style={{flex: 2, backgroundColor: 'darkorange', width: 20}} />
+            <View style={{flex: 3, backgroundColor: 'green', width: 30}} />
           </View>
 
-          <Image style={[{ width: 150, height: 150 }]} source={require('./images/test.jpg')} />
+          <Image
+            style={[{width: 150, height: 150}]}
+            source={require('./images/test.jpg')}
+          />
 
-          <Image source={{ uri: 'https://reactjs.org/logo-og.png' }} style={{ width: 400, height: 400 }} />
+          <Image
+            source={{uri: 'https://reactjs.org/logo-og.png'}}
+            style={{width: 400, height: 400}}
+          />
 
-          <ImageBackground style={[{ width: 150, height: 150 }]} source={require('./images/test.jpg')}>
-            <Text style={{ color: "white" }}>Inside background.........Also here</Text>
+          <ImageBackground
+            style={[{width: 150, height: 150}]}
+            source={require('./images/test.jpg')}>
+            <Text style={{color: 'white'}}>
+              Inside background.........Also here
+            </Text>
           </ImageBackground>
 
           <Section title="Debug">
@@ -198,12 +203,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     // padding: 20,
-    margin: 8
+    margin: 8,
   },
   nav_button_container: {
     width: '50%',
     margin: 8,
-    alignSelf: 'center'
+    alignSelf: 'center',
   },
 });
 
