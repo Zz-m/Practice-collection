@@ -3,6 +3,7 @@ package cn.denghanxi.appium;
 import cn.denghanxi.AppConstants;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
+import io.appium.java_client.service.local.flags.GeneralServerFlag;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -33,7 +34,9 @@ public class AppiumServerManager implements Closeable {
 
     public AppiumDriverLocalService getOrCreateLocalService() {
         if (service == null || !service.isRunning()) {
-            service = AppiumDriverLocalService.buildService(new AppiumServiceBuilder().usingPort(AppConstants.APPIUM_SERVER_PORT));
+            service = AppiumDriverLocalService.buildService(new AppiumServiceBuilder()
+                    .usingPort(AppConstants.APPIUM_SERVER_PORT)
+                    .withArgument(GeneralServerFlag.LOG_LEVEL, "warn"));
             service.enableDefaultSlf4jLoggingOfOutputData();
             service.start();
         }
