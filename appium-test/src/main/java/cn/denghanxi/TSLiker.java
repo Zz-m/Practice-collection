@@ -1,8 +1,10 @@
 package cn.denghanxi;
 
+import cn.denghanxi.adb.AdbManager;
 import cn.denghanxi.api.AppiumApi;
 import cn.denghanxi.appium.AppiumHelper;
 import cn.denghanxi.appium.AppiumServerManager;
+import cn.denghanxi.model.AndroidDevice;
 import cn.denghanxi.model.TSAccount;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.nativekey.AndroidKey;
@@ -23,6 +25,7 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Scanner;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class TSLiker {
@@ -32,11 +35,12 @@ public class TSLiker {
 
     private final ConcurrentLinkedQueue<TSAccount> accountQueue = new ConcurrentLinkedQueue<>();
     private List<String> postList = null;
+    private List<AndroidDevice> deviceList = null;
 
     public void start() {
         logger.debug("begin");
 
-        prepare();
+        prepareAllData();
 
         AppiumDriverLocalService localService = serverManager.getOrCreateLocalService();
         logger.debug("localService.isRunning:{}", localService.isRunning());
@@ -176,6 +180,25 @@ public class TSLiker {
     }
 
     private boolean prepare() {
+        while (true) {
+            if (!prepareAllData()) {
+                return false;
+            }
+            report();
+            logger.debug("Press 'y' to start. press 'r' to rescan devices. press any keys to stop.");
+            Scanner scanner = new Scanner(System.in);
+            String in = scanner.nextLine();
+            if ("Y".equals(in) || "y".equals(in)) {
+                return true;
+            }
+            if ("R".equals(in) || "r".equals(in)) {
+                continue;
+            }
+            return false;
+        }
+    }
+
+    private boolean prepareAllData() {
         //accounts
         Path accountPath = Paths.get("accounts.csv");
         File accountFile = accountPath.toFile();
@@ -190,16 +213,17 @@ public class TSLiker {
             return false;
         }
 
-        String[] HEADERS = { "Username", "Password"};
+        String[] HEADERS = {"Username", "Password"};
 
         CSVFormat csvFormat = CSVFormat.DEFAULT.builder()
                 .setHeader(HEADERS)
                 .setSkipHeaderRecord(true)
                 .build();
 
+        accountQueue.clear();
         try {
             Iterable<CSVRecord> accounts = csvFormat.parse(new FileReader(accountFile));
-            for (CSVRecord record:accounts) {
+            for (CSVRecord record : accounts) {
                 accountQueue.add(new TSAccount(record.get(0), record.get(1)));
             }
         } catch (FileNotFoundException e) {
@@ -233,13 +257,13 @@ public class TSLiker {
                 }
                 line = postsReader.readLine();
             }
-            if (posts.size() == 0) {
+            if (posts.isEmpty()) {
                 logger.error("Read posts file get 0 post.");
                 return false;
             }
             postList = Collections.unmodifiableList(posts);
         } catch (FileNotFoundException e) {
-            logger.error("Posts file not found.",e);
+            logger.error("Posts file not found.", e);
             return false;
         } catch (IOException e) {
             logger.error("Read posts file fail.", e);
@@ -247,7 +271,48 @@ public class TSLiker {
         }
 
         //devices
+        try {
+            deviceList = AdbManager.getInstance().getAllDevices();
+            if (deviceList.isEmpty()) {
+                logger.error("Get zero device.");
+                return false;
+            }
+        } catch (IOException e) {
+            logger.error("get devices fail.", e);
+            return false;
+        }
 
         return true;
+    }
+
+    private void report() {
+        if (postList == null || deviceList == null) {
+            logger.error("Can not create report.");
+            return;
+        }
+        logger.debug("We have {} accounts to like {} posts.", accountQueue.size(), postList.size());
+        List<AndroidDevice> readyList = new ArrayList<>();
+        List<AndroidDevice> notReadyList = new ArrayList<>();
+        for (AndroidDevice device : deviceList) {
+            if (device.isReady()) {
+                readyList.add(device);
+            } else {
+                notReadyList.add(device);
+            }
+        }
+        logger.debug("{} devices is ready.", readyList.size());
+        StringBuilder readyNames = new StringBuilder();
+        for (AndroidDevice device : readyList) {
+            readyNames.append(device.udid()).append(" ");
+        }
+        logger.debug(readyNames.toString());
+        if (!notReadyList.isEmpty()) {
+            logger.warn("{} device is not ready.", notReadyList.size());
+            StringBuilder notReadyNames = new StringBuilder();
+            for (AndroidDevice device : notReadyList) {
+                notReadyNames.append(device.udid()).append(" ");
+            }
+            logger.warn(notReadyNames.toString());
+        }
     }
 }
