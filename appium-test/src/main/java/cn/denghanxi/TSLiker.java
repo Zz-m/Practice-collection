@@ -1,26 +1,21 @@
 package cn.denghanxi;
 
 import cn.denghanxi.api.AppiumApi;
+import cn.denghanxi.appium.AppiumHelper;
 import cn.denghanxi.appium.AppiumServerManager;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
-import io.appium.java_client.service.local.AppiumServiceBuilder;
-import io.appium.java_client.service.local.Slf4jLogMessageContext;
-import org.openqa.selenium.interactions.Action;
-import org.openqa.selenium.remote.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.Duration;
-import java.util.function.BiConsumer;
 
 public class TSLiker {
     private final Logger logger = LoggerFactory.getLogger(TSLiker.class);
@@ -33,7 +28,6 @@ public class TSLiker {
         logger.debug("localService.isRunning:{}", localService.isRunning());
 
         printPath();
-
 
 
         Thread t1 = new Thread(() -> {
@@ -101,11 +95,13 @@ public class TSLiker {
                     // The default URL in Appium 1 is http://127.0.0.1:4723/wd/hub
                     new URL("http://127.0.0.1:" + AppConstants.APPIUM_SERVER_PORT), options
             );
+            driver.pressKey(new KeyEvent(AndroidKey.HOME));
+
             while (true) {
                 try {
-                    driver.openNotifications();
+                    AppiumHelper.swipeLeft(driver);
                     Thread.sleep(2000);
-                    driver.pressKey(new KeyEvent().withKey(AndroidKey.BACK));
+                    AppiumHelper.swipeRight(driver);
                     Thread.sleep(2000);
                 } catch (InterruptedException e) {
                     logger.debug("InterruptedException");
@@ -129,24 +125,21 @@ public class TSLiker {
                 .ensureWebviewsHavePages()
                 .nativeWebScreenshot()
                 .setNewCommandTimeout(Duration.ofSeconds(10))
-                .setUdid("b1934558");
+                .setUdid("49c8aa83");
         try {
             AndroidDriver driver = new AndroidDriver(
                     // The default URL in Appium 1 is http://127.0.0.1:4723/wd/hub
                     new URL("http://127.0.0.1:" + AppConstants.APPIUM_SERVER_PORT), options
             );
 
+            driver.pressKey(new KeyEvent(AndroidKey.HOME));
+
+
             while (true) {
-                try {
-                    logger.debug("open notification");
-                    driver.openNotifications();
-                    Thread.sleep(2000);
-                    driver.pressKey(new KeyEvent().withKey(AndroidKey.BACK));
-                    logger.debug("close notification");
-                    Thread.sleep(2000);
-                } catch (InterruptedException e) {
-                    logger.debug("InterruptedException");
-                }
+
+                AppiumHelper.swipeLeft(driver);
+                AppiumHelper.swipeRight(driver);
+
             }
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
