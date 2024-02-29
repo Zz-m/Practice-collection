@@ -8,6 +8,6 @@ public class Main {
     private static final Logger LOGGER = LoggerFactory.getLogger(Main.class);
     public static void main(String[] args) {
         LOGGER.debug("START...");
-        new TSLiker().start();
+        new TSLiker().test();
     }
 }
