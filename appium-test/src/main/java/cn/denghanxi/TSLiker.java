@@ -76,6 +76,7 @@ public class TSLiker {
         if (!prepareResult) {
             return;
         }
+        testProgress();
     }
 
     private void setupDevice() {
@@ -185,7 +186,7 @@ public class TSLiker {
                 return false;
             }
             report();
-            logger.debug("Press 'y' to start. press 'r' to rescan devices. press any keys to stop.");
+            System.out.print("Press 'y' to start, press 'r' to rescan devices, press any keys to stop:");
             Scanner scanner = new Scanner(System.in);
             String in = scanner.nextLine();
             if ("Y".equals(in) || "y".equals(in)) {
@@ -286,6 +287,7 @@ public class TSLiker {
     }
 
     private void report() {
+        logger.debug("******************************************************");
         if (postList == null || deviceList == null) {
             logger.error("Can not create report.");
             return;
@@ -314,5 +316,12 @@ public class TSLiker {
             }
             logger.warn(notReadyNames.toString());
         }
+        logger.debug("******************************************************");
+    }
+
+
+    //=====================================
+    private void testProgress(){
+
     }
 }
