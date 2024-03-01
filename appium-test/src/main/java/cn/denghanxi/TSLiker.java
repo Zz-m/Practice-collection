@@ -1,14 +1,11 @@
 package cn.denghanxi;
 
 import cn.denghanxi.adb.AdbManager;
-import cn.denghanxi.api.AppiumApi;
-import cn.denghanxi.appium.AppiumHelper;
 import cn.denghanxi.appium.AppiumServerManager;
+import cn.denghanxi.component.PhoneTask;
 import cn.denghanxi.model.AndroidDevice;
 import cn.denghanxi.model.TSAccount;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.nativekey.AndroidKey;
-import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import me.tongfei.progressbar.ProgressBar;
@@ -28,11 +25,13 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class TSLiker {
     private final Logger logger = LoggerFactory.getLogger(TSLiker.class);
-    private AppiumApi api = new AppiumApi();
-    private AppiumServerManager serverManager = AppiumServerManager.getInstance();
+    private final ExecutorService taskExecutor = Executors.newCachedThreadPool();
+    private final AppiumServerManager serverManager = AppiumServerManager.getInstance();
 
     private final ConcurrentLinkedQueue<TSAccount> accountQueue = new ConcurrentLinkedQueue<>();
     private List<String> postList = null;
@@ -41,34 +40,36 @@ public class TSLiker {
     public void start() {
         logger.debug("begin");
 
-        prepareAllData();
+        boolean prepareSuccess = prepare();
+        if (!prepareSuccess) {
+            return;
+        }
 
+        logger.info("starting local server...");
         AppiumDriverLocalService localService = serverManager.getOrCreateLocalService();
         logger.debug("localService.isRunning:{}", localService.isRunning());
 
-        printPath();
+        int deviceStarted = 0;
 
+        try (ProgressBar progressBar = new ProgressBar("TSLiker", accountQueue.size())) {
+            for (AndroidDevice device : deviceList) {
+                if (device.isReady()) {
+                    deviceStarted++;
+                    taskExecutor.submit(new PhoneTask(device, accountQueue, postList, progressBar::step));
+                }
+            }
+            logger.debug("start task count:{}", deviceStarted);
 
-        Thread t1 = new Thread(() -> {
-            logger.debug("Thread 1 start");
-            this.testDevice1();
-        });
-        Thread t2 = new Thread(this::testDevice2);
+            taskExecutor.shutdown();
 
-        t1.start();
-        t2.start();
-
-
-        try {
-            Thread.sleep(500000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+            while (!taskExecutor.isTerminated()) {
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    logger.warn("Main thread interrupted.", e);
+                }
+            }
         }
-//
-//            logger.debug("get response:{}", response.getValue());
-//
-
-
     }
 
     public void test() {
@@ -78,7 +79,9 @@ public class TSLiker {
             return;
         }
         testProgress();
+        testPrintPath();
     }
+
 
     private void setupDevice() {
 
@@ -105,77 +108,7 @@ public class TSLiker {
         logger.debug("create driver success.");
     }
 
-    private void testDevice1() {
-
-        UiAutomator2Options options = new UiAutomator2Options()
-                .setPlatformName("Android")
-                .setAppPackage("com.truthsocial.android.app")
-                .setNoReset(false)
-                .autoGrantPermissions()
-                .setAutomationName("UiAutomator2")
-                .setAppActivity("com.truthsocial.app.features.login.LoginActivity")
-                .ensureWebviewsHavePages()
-                .nativeWebScreenshot()
-                .setNewCommandTimeout(Duration.ofSeconds(10))
-                .setUdid("kn6dsgaepzk7pnce");
-        try {
-            AndroidDriver driver = new AndroidDriver(
-                    // The default URL in Appium 1 is http://127.0.0.1:4723/wd/hub
-                    new URL("http://127.0.0.1:" + AppConstants.APPIUM_SERVER_PORT), options
-            );
-            driver.pressKey(new KeyEvent(AndroidKey.HOME));
-
-            while (true) {
-                try {
-                    AppiumHelper.swipeLeft(driver);
-                    Thread.sleep(2000);
-                    AppiumHelper.swipeRight(driver);
-                    Thread.sleep(2000);
-                } catch (InterruptedException e) {
-                    logger.debug("InterruptedException");
-                }
-            }
-        } catch (MalformedURLException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    private void testDevice2() {
-
-        logger.debug("testDevice2 start");
-        UiAutomator2Options options = new UiAutomator2Options()
-                .setPlatformName("Android")
-                .setAppPackage("com.truthsocial.android.app")
-                .setNoReset(false)
-                .autoGrantPermissions()
-                .setAutomationName("UiAutomator2")
-                .setAppActivity("com.truthsocial.app.features.login.LoginActivity")
-                .ensureWebviewsHavePages()
-                .nativeWebScreenshot()
-                .setNewCommandTimeout(Duration.ofSeconds(10))
-                .setUdid("49c8aa83");
-        try {
-            AndroidDriver driver = new AndroidDriver(
-                    // The default URL in Appium 1 is http://127.0.0.1:4723/wd/hub
-                    new URL("http://127.0.0.1:" + AppConstants.APPIUM_SERVER_PORT), options
-            );
-
-            driver.pressKey(new KeyEvent(AndroidKey.HOME));
-
-
-            while (true) {
-
-                AppiumHelper.swipeLeft(driver);
-                AppiumHelper.swipeRight(driver);
-
-            }
-        } catch (MalformedURLException e) {
-            throw new RuntimeException(e);
-        }
-
-    }
-
-    private void printPath() {
+    private void testPrintPath() {
         Path currentRelativePath = Paths.get("");
         String s = currentRelativePath.toAbsolutePath().toString();
         logger.debug("current path:{}", s);
@@ -322,7 +255,7 @@ public class TSLiker {
 
 
     //=====================================
-    private void testProgress(){
+    private void testProgress() {
         ConcurrentLinkedQueue<TSAccount> testQueue = new ConcurrentLinkedQueue<>();
         for (int i = 0; i < 100; i++) {
             testQueue.add(new TSAccount("asd", "asd"));
