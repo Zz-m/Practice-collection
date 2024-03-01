@@ -9,11 +9,14 @@ import org.openqa.selenium.interactions.PointerInput;
 import org.openqa.selenium.interactions.Sequence;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
 import java.util.List;
 
 public class AppiumHelper {
+    private static final Logger LOGGER = LoggerFactory.getLogger(AppiumHelper.class);
 
     private AppiumHelper() {
     }
@@ -90,6 +93,7 @@ public class AppiumHelper {
     }
 
     public static void tapPoint(AppiumDriver driver,Point point) {
+        LOGGER.debug("click x:{}, y:{}", point.x, point.y);
         PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
         Sequence tap = new Sequence(finger, 1);
         tap.addAction(finger.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), point.getX(), point.getY()));

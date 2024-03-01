@@ -77,6 +77,7 @@ public class PhoneTask implements Runnable {
                 logger.debug("already in main activity.");
 
                 for (String post : postList) {
+                    Thread.sleep(1000);
                     likerPost(driver, post);
                 }
                 //wait to sync to server.
@@ -161,13 +162,18 @@ public class PhoneTask implements Runnable {
 
                 logger.debug("find like button.");
                 wait.until(ExpectedConditions.elementToBeClickable(likeButton));
-//                likeButton.click();
-                AppiumHelper.clickElement(driver, likeButton);
+                likeButton.click();
+//                AppiumHelper.clickElement(driver, likeButton);
                 logger.debug("like success!");
                 break;
             } catch (NoSuchElementException e) {
                 logger.debug("not find like button, scroll...");
                 AppiumHelper.swipeUpByElement(driver, scrollElement);
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException ex) {
+                    logger.warn("hide exception.");
+                }
             } finally {
                 counter ++;
             }
