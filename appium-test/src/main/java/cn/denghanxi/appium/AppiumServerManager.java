@@ -36,7 +36,7 @@ public class AppiumServerManager implements Closeable {
         if (service == null || !service.isRunning()) {
             service = AppiumDriverLocalService.buildService(new AppiumServiceBuilder()
                     .usingPort(AppConstants.APPIUM_SERVER_PORT)
-                    .withArgument(GeneralServerFlag.LOG_LEVEL, "warn"));
+                    .withArgument(GeneralServerFlag.LOG_LEVEL, "error"));
             service.enableDefaultSlf4jLoggingOfOutputData();
             service.start();
         }

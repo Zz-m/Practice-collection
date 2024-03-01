@@ -66,14 +66,14 @@ public class PhoneTask implements Runnable {
                     continue;
                 }
                 tsLogin(driver, account);
+                Thread.sleep(1000);
                 try {
                     handlePermissionNotification(driver);
                 } catch (Exception e) {
                     logger.error("Handle permission error:", e);
                     return;
                 }
-                WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-                wait.until(ExpectedConditions.visibilityOfElementLocated(AppiumBy.xpath("//android.view.View[@content-desc='User Avatar']")));
+
                 logger.debug("already in main activity.");
 
                 for (String post : postList) {

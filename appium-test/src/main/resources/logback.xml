@@ -23,8 +23,11 @@
     </appender>
 
     <root level="debug">
-        <appender-ref ref="CONSOLE" />
         <appender-ref ref="ROLLING" />
+    </root>
+
+    <root level="info">
+        <appender-ref ref="CONSOLE" />
     </root>
 
     <logger name="cn.com.people.cpc.watchdogserver" level="debug" additivity="false">

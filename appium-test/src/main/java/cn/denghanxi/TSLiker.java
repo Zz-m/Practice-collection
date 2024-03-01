@@ -222,12 +222,12 @@ public class TSLiker {
     }
 
     private void report() {
-        logger.debug("******************************************************");
+        System.out.println("******************************************************");
         if (postList == null || deviceList == null) {
             logger.error("Can not create report.");
             return;
         }
-        logger.debug("We have {} accounts to like {} posts.", accountQueue.size(), postList.size());
+        System.out.println("We have " + accountQueue.size() + " accounts to like " +postList.size()+ " posts." );
         List<AndroidDevice> readyList = new ArrayList<>();
         List<AndroidDevice> notReadyList = new ArrayList<>();
         for (AndroidDevice device : deviceList) {
@@ -237,21 +237,21 @@ public class TSLiker {
                 notReadyList.add(device);
             }
         }
-        logger.debug("{} devices is ready.", readyList.size());
+        System.out.println(readyList.size() + " devices is ready." );
         StringBuilder readyNames = new StringBuilder();
         for (AndroidDevice device : readyList) {
             readyNames.append(device.udid()).append(" ");
         }
-        logger.debug(readyNames.toString());
+        System.out.println(readyNames);
         if (!notReadyList.isEmpty()) {
-            logger.warn("{} device is not ready.", notReadyList.size());
+            System.out.println(notReadyList.size() + " device is not ready." );
             StringBuilder notReadyNames = new StringBuilder();
             for (AndroidDevice device : notReadyList) {
                 notReadyNames.append(device.udid()).append(" ");
             }
-            logger.warn(notReadyNames.toString());
+            System.out.println(notReadyNames);
         }
-        logger.debug("******************************************************");
+        System.out.println("******************************************************");
     }
 
 
