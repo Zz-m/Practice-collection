@@ -44,7 +44,7 @@ public class PhoneTask implements Runnable {
 
     @Override
     public void run() {
-        logger.debug("tast start for device: [{}]", device.udid());
+        logger.debug("task start for device: [{}]", device.udid());
         UiAutomator2Options options = getOptionByDevice(device);
         AndroidDriver driver = null;
         logger.debug("create driver for device:{}", device.udid());
