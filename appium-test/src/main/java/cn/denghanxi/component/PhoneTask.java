@@ -182,7 +182,7 @@ public class PhoneTask implements Runnable {
     }
 
     private void handlePermissionNotification(AndroidDriver driver) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1));
         try {
             WebElement container = wait.until(ExpectedConditions.visibilityOfElementLocated(AppiumBy.xpath("//android.widget.LinearLayout[@resource-id=\"com.lbe.security.miui:id/parentPanel\"]")));
             try {
