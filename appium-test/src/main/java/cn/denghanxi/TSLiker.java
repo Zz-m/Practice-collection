@@ -38,7 +38,7 @@ public class TSLiker {
     private List<AndroidDevice> deviceList = null;
 
     public void start() {
-        logger.debug("begin");
+        logger.info("start");
 
         boolean prepareSuccess = prepare();
         if (!prepareSuccess) {
@@ -73,13 +73,14 @@ public class TSLiker {
     }
 
     public void test() {
-        boolean prepareResult = prepare();
-        logger.debug("Prepare result:{}", prepareResult);
-        if (!prepareResult) {
-            return;
-        }
-        testProgress();
-        testPrintPath();
+//        boolean prepareResult = prepare();
+//        logger.debug("Prepare result:{}", prepareResult);
+//        if (!prepareResult) {
+//            return;
+//        }
+//        testProgress();
+//        testPrintPath();
+        testLocalServer();
     }
 
 
@@ -280,6 +281,18 @@ public class TSLiker {
             }
         } catch (InterruptedException e) {
             logger.error("progress interrupted", e);
+        }
+    }
+
+    private void testLocalServer() {
+        logger.info("starting local server...");
+        AppiumDriverLocalService localService = serverManager.getOrCreateLocalService();
+        logger.debug("localService.isRunning:{}", localService.isRunning());
+
+        try {
+            Thread.sleep(500000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
         }
     }
 }

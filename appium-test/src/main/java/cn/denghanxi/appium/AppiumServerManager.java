@@ -49,7 +49,7 @@ public class AppiumServerManager implements Closeable {
             service.stop();
             service.close();
             service = null;
-            logger.debug("Appium service shutdown graceful.");
+            logger.debug("Appium service shutdown gracefully.");
         } else {
             logger.debug("No appium service to shutdown.");
         }
