@@ -11,6 +11,7 @@ import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
+import me.tongfei.progressbar.ProgressBar;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
 import org.slf4j.Logger;
@@ -322,6 +323,30 @@ public class TSLiker {
 
     //=====================================
     private void testProgress(){
+        ConcurrentLinkedQueue<TSAccount> testQueue = new ConcurrentLinkedQueue<>();
+        for (int i = 0; i < 100; i++) {
+            testQueue.add(new TSAccount("asd", "asd"));
+        }
+        int end = testQueue.size();
 
+        for (int i = 0; i < 5; i++) {
+            new Thread(() -> {
+                while (testQueue.poll() != null) {
+                    try {
+                        Thread.sleep(2500);
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
+                }
+            }).start();
+        }
+        try (ProgressBar pb = new ProgressBar("TsLiker", end)) {
+            while (!testQueue.isEmpty()) {
+                pb.stepTo(end - testQueue.size());
+                Thread.sleep(3000);
+            }
+        } catch (InterruptedException e) {
+            logger.error("progress interrupted", e);
+        }
     }
 }
