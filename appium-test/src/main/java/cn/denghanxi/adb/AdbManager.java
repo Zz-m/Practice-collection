@@ -42,6 +42,7 @@ public class AdbManager {
         int exitValue = executor.execute(command);
         String resultString = outputStream.toString(StandardCharsets.UTF_8);
         resultString.lines()
+                .filter(s -> !s.startsWith("*"))
                 .skip(1)
                 .forEach(s -> {
                     if (!Strings.isNullOrEmpty(s)) {

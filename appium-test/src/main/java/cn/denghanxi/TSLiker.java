@@ -239,6 +239,7 @@ public class TSLiker {
         }
         System.out.println(readyList.size() + " devices is ready." );
         StringBuilder readyNames = new StringBuilder();
+        readyNames.append("Ready devices: ");
         for (AndroidDevice device : readyList) {
             readyNames.append(device.udid()).append(" ");
         }
@@ -246,6 +247,7 @@ public class TSLiker {
         if (!notReadyList.isEmpty()) {
             System.out.println(notReadyList.size() + " device is not ready." );
             StringBuilder notReadyNames = new StringBuilder();
+            notReadyNames.append("Not ready devices: ");
             for (AndroidDevice device : notReadyList) {
                 notReadyNames.append(device.udid()).append(" ");
             }
