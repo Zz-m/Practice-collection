@@ -40,6 +40,10 @@ public class AdbManager {
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         executor.setStreamHandler(new PumpStreamHandler(outputStream));
         int exitValue = executor.execute(command);
+        if (exitValue != 0) {
+            logger.error("execute adb devices fail with code:{}", exitValue);
+            return Collections.emptyList();
+        }
         String resultString = outputStream.toString(StandardCharsets.UTF_8);
         resultString.lines()
                 .filter(s -> !s.startsWith("*"))
