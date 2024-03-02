@@ -149,7 +149,7 @@ public class PhoneTask implements Runnable {
         WebElement scrollElement = null;
 
         try {
-            scrollElement = driver.findElement(AppiumBy.xpath("(//android.widget.FrameLayout[@resource-id=\"com.truthsocial.android.app:id/nav_host_fragment_feed\"])[2]/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View[1]/android.view.View"));
+            scrollElement = driver.findElement(AppiumBy.xpath("(//android.widget.FrameLayout[@resource-id='com.truthsocial.android.app:id/nav_host_fragment_feed'])"));
         } catch (NoSuchElementException e) {
             logger.error("fail to find scroll view.", e);
             return;
