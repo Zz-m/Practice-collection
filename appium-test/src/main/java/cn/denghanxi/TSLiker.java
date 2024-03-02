@@ -140,12 +140,12 @@ public class TSLiker {
         File accountFile = accountPath.toFile();
 
         if (!accountFile.exists()) {
-            logger.debug("Accounts file not found from: {}", accountPath);
+            logger.error("Accounts file not found from: {}", accountPath.toAbsolutePath());
             return false;
         }
 
         if (accountFile.length() == 0) {
-            logger.debug("Accounts file is empty.");
+            logger.error("Accounts file is empty.");
             return false;
         }
 
@@ -175,12 +175,12 @@ public class TSLiker {
         File postsFile = postsPath.toFile();
 
         if (!postsFile.exists()) {
-            logger.debug("Posts file not found from: {}", postsPath);
+            logger.error("Posts file not found from: {}", postsPath.toAbsolutePath());
             return false;
         }
 
         if (postsFile.length() == 0) {
-            logger.debug("Posts file is empty.");
+            logger.error("Posts file is empty.");
             return false;
         }
         try {
