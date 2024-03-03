@@ -47,7 +47,7 @@ public class TSLiker {
 
         logger.info("starting local server...");
         AppiumDriverLocalService localService = serverManager.getOrCreateLocalService();
-        logger.debug("localService.isRunning:{}", localService.isRunning());
+        logger.info("localService.isRunning:{}", localService.isRunning());
 
         int deviceStarted = 0;
 
