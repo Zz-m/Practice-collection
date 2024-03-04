@@ -13,7 +13,6 @@ import io.appium.java_client.android.options.UiAutomator2Options;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
@@ -84,7 +83,10 @@ public class PhoneTask implements Runnable {
                 Thread.sleep(4000);
             } catch (TimeoutException timeoutException) {
                 logger.warn("Some operate on device [{}] timeout. Handle next account.", device.udid());
-            } catch (Exception e) {
+            } catch (InterruptedException e) {
+                logger.info("Task with device:{} shutdown gracefully.",device.udid());
+            }
+            catch (Exception e) {
                 logger.error("Unhandled exception happen.", e);
             }finally {
                 progressCallback.completeOneAccount();

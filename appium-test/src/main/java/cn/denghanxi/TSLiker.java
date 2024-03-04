@@ -20,13 +20,11 @@ import java.net.URL;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.Duration;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 public class TSLiker {
     private final Logger logger = LoggerFactory.getLogger(TSLiker.class);
@@ -34,6 +32,7 @@ public class TSLiker {
     private final AppiumServerManager serverManager = AppiumServerManager.getInstance();
 
     private final ConcurrentLinkedQueue<TSAccount> accountQueue = new ConcurrentLinkedQueue<>();
+    private final Map<String, Future<?>> taskMap = new HashMap<>();
     private List<String> postList = null;
     private List<AndroidDevice> deviceList = null;
 
@@ -59,21 +58,57 @@ public class TSLiker {
             for (AndroidDevice device : deviceList) {
                 if (device.isReady()) {
                     deviceStarted++;
-                    taskExecutor.submit(new PhoneTask(device, accountQueue, postList, progressBar::step));
+                    Future<?> f = taskExecutor.submit(new PhoneTask(device, accountQueue, postList, progressBar::step));
+                    taskMap.put(device.udid(), f);
                 }
             }
             logger.debug("start task count:{}", deviceStarted);
 
-            taskExecutor.shutdown();
 
-            while (!taskExecutor.isTerminated()) {
+            while (!accountQueue.isEmpty()) {
                 try {
-                    Thread.sleep(2000);
+                    Thread.sleep(3000);
+                    try {
+                        List<AndroidDevice> updateDeviceList = AdbManager.getInstance().getAllDevices();
+                        List<AndroidDevice> readyDeviceList = new ArrayList<>();
+                        Set<String> readyDeviceIdSet = new HashSet<>();
+                        for (AndroidDevice device : updateDeviceList) {
+                            if (device.isReady()) {
+                                readyDeviceList.add(device);
+                                readyDeviceIdSet.add(device.udid());
+                            }
+                        }
+                        Set<String> currentRunningId = Set.copyOf(taskMap.keySet());
+                        //stop unplug phone task
+                        for (String id : currentRunningId) {
+                            if (!readyDeviceIdSet.contains(id)) {
+                                logger.warn("Device:{} disconnected! Remove the task.", id);
+                                Future<?> f = taskMap.get(id);
+                                f.cancel(true);
+                                taskMap.remove(id);
+                            }
+                        }
+
+                        //create new plugin phone task
+                        currentRunningId = Set.copyOf(taskMap.keySet());
+                        for (AndroidDevice device : readyDeviceList) {
+                            if (!currentRunningId.contains(device.udid())) {
+                                logger.info("Find new device:{} connected. Start new task.", device.udid());
+                                Future<?> f = taskExecutor.submit(new PhoneTask(device, accountQueue, postList, progressBar::step));
+                                taskMap.put(device.udid(), f);
+                            }
+                        }
+
+                    } catch (IOException e) {
+                        logger.error("get devices fail.", e);
+                    }
                 } catch (InterruptedException e) {
                     logger.warn("Main thread interrupted.", e);
                 }
             }
         }
+
+        taskExecutor.shutdown();
     }
 
     public void test() {
