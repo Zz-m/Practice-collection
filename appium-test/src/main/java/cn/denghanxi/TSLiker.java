@@ -106,9 +106,23 @@ public class TSLiker {
                     logger.warn("Main thread interrupted.", e);
                 }
             }
+            taskExecutor.shutdown();
+            while (true) {
+                boolean allComplete = true;
+                try {
+                    Thread.sleep(3000);
+                } catch (InterruptedException e) {
+                    logger.warn("interrupted");
+                }
+                for (Future<?> f : taskMap.values()) {
+                    if (!f.isDone()) allComplete = false;
+                }
+                if (allComplete) break;
+            }
         }
+        logger.info("Finished.");
+        taskExecutor.shutdownNow();
 
-        taskExecutor.shutdown();
     }
 
     public void test() {
