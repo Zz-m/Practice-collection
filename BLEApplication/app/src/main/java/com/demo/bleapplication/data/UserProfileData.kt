@@ -16,7 +16,7 @@ data class UserProfileData(
 
     companion object {
         fun toByteArray(profileData: UserProfileData): ByteArray {
-            return byteArrayOf(
+            val normal =  byteArrayOf(
                 profileData.IsMan.toByte(),
                 profileData.IsLookingForMan.toByte(),
                 profileData.FriendsToTalk.toByte(),
@@ -26,9 +26,17 @@ data class UserProfileData(
                 profileData.ProfilSliderPosition.toByte(),
                 profileData.LookingForSliderPosition.toByte()
             )
+            val param = profileData.Parameters.toByteArray(Charsets.UTF_8)
+
+            return normal.plus(param)
         }
 
         fun fromByteArray(data: ByteArray): UserProfileData {
+            var param: ByteArray = byteArrayOf()
+            if (data.size >= 8) {
+                param = data.slice(8..<data.size).toByteArray()
+            }
+
             return UserProfileData(
                 IsMan = data[0].toInt(),
                 IsLookingForMan = data[1].toInt(),
@@ -38,6 +46,7 @@ data class UserProfileData(
                 JustSexualIntentions = data[5].toInt(),
                 ProfilSliderPosition = data[6].toInt(),
                 LookingForSliderPosition = data[7].toInt(),
+                Parameters = param.toString(Charsets.UTF_8)
             )
         }
     }
