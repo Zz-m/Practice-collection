@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent"
+        tools:context=".fragments.HomePage">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtDeviceList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/red"
+                android:gravity="center"
+                android:text="Eye Contact"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtAdvertise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:padding="8dp"
+            android:layout_marginTop="6dp"
+            android:text="Advertise Device"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toStartOf="@+id/advertisingSwitch"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/advertisingSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:thumbTint="@color/red"
+            app:trackTint="@color/red_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/aboutBtn"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="50dp"
+            android:background="@color/red_light"
+            android:src="@drawable/baseline_info_24"
+            app:layout_constraintEnd_toEndOf="@+id/lookingForBtn"
+            app:layout_constraintStart_toStartOf="@+id/lookingForBtn"
+            app:layout_constraintTop_toBottomOf="@+id/lookingForTxt" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/infotxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="About"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/aboutBtn"
+            app:layout_constraintStart_toStartOf="@+id/aboutBtn"
+            app:layout_constraintTop_toBottomOf="@+id/aboutBtn" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/exitBtn"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/baseline_exit_to_app_24"
+            android:background="@color/red_light"
+            app:layout_constraintEnd_toEndOf="@+id/settingsBtn"
+            app:layout_constraintStart_toStartOf="@+id/settingsBtn"
+            app:layout_constraintTop_toBottomOf="@+id/settingsTxt" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/exitTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Exit"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/exitBtn"
+            app:layout_constraintStart_toStartOf="@+id/exitBtn"
+            app:layout_constraintTop_toBottomOf="@+id/exitBtn" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/profileBtn"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/red_light"
+
+            android:src="@drawable/baseline_perm_identity_24"
+            app:layout_constraintEnd_toStartOf="@+id/txtAdvertise"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/advertisingSwitch" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/profileTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Profile"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/profileBtn"
+            app:layout_constraintStart_toStartOf="@+id/profileBtn"
+            app:layout_constraintTop_toBottomOf="@+id/profileBtn" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/lookingForBtn"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/red_light"
+            android:src="@drawable/baseline_person_search_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/txtAdvertise"
+            app:layout_constraintTop_toBottomOf="@+id/advertisingSwitch" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/lookingForTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Looking for"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/lookingForBtn"
+            app:layout_constraintStart_toStartOf="@+id/lookingForBtn"
+            app:layout_constraintTop_toBottomOf="@+id/lookingForBtn" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/settingsBtn"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="50dp"
+            android:background="@color/red_light"
+            android:src="@drawable/baseline_settings_24"
+            app:layout_constraintEnd_toEndOf="@+id/profileBtn"
+            app:layout_constraintStart_toStartOf="@+id/profileBtn"
+            app:layout_constraintTop_toBottomOf="@+id/profileTxt" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/settingsTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Settings"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/settingsBtn"
+            app:layout_constraintStart_toStartOf="@+id/settingsBtn"
+            app:layout_constraintTop_toBottomOf="@+id/settingsBtn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

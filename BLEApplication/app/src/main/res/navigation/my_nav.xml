@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/intro">
+
+    <fragment
+        android:id="@+id/intro"
+        android:name="com.demo.bleapplication.fragments.Intro"
+        android:label="intro"
+        tools:layout="@layout/intro" >
+        <action
+            android:id="@+id/action_intro_to_homePage"
+            app:destination="@id/homePage" />
+    </fragment>
+    <fragment
+        android:id="@+id/homePage"
+        android:name="com.demo.bleapplication.fragments.HomePage"
+        android:label="home_page"
+        tools:layout="@layout/home_page" >
+        <action
+            android:id="@+id/action_homePage_to_lookingFor"
+            app:destination="@id/lookingFor" />
+        <action
+            android:id="@+id/action_homePage_to_profile"
+            app:destination="@id/profile" />
+        <action
+            android:id="@+id/action_homePage_to_settings"
+            app:destination="@id/settings" />
+        <action
+            android:id="@+id/action_homePage_to_about"
+            app:destination="@id/about" />
+    </fragment>
+    <fragment
+        android:id="@+id/lookingFor"
+        android:name="com.demo.bleapplication.fragments.LookingFor"
+        android:label="looking_for"
+        tools:layout="@layout/looking_for" >
+        <action
+            android:id="@+id/action_lookingFor_to_homePage"
+            app:destination="@id/homePage" />
+    </fragment>
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.demo.bleapplication.fragments.Profile"
+        android:label="profile"
+        tools:layout="@layout/profile" >
+        <action
+            android:id="@+id/action_profile_to_homePage"
+            app:destination="@id/homePage" />
+    </fragment>
+    <fragment
+        android:id="@+id/settings"
+        android:name="com.demo.bleapplication.fragments.Settings"
+        android:label="settings"
+        tools:layout="@layout/settings" >
+        <action
+            android:id="@+id/action_settings_to_homePage"
+            app:destination="@id/homePage" />
+    </fragment>
+    <fragment
+        android:id="@+id/about"
+        android:name="com.demo.bleapplication.fragments.About"
+        android:label="about"
+        tools:layout="@layout/about" >
+        <action
+            android:id="@+id/action_about_to_homePage"
+            app:destination="@id/homePage" />
+    </fragment>
+</navigation>

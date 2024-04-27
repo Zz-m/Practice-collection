@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">BLEApplication</string>
+    <string name="rationale_camera">This app needs access to your bluetooth permission</string>
+    <string name="txt_scan">Scan</string>
+    <string name="txt_advertise">Advertise</string>
+    <string name="txt_advertising_device">Advertising Device: MyBLE…</string>
+    <string name="txt_auto_advertise">Auto Advertise</string>
+    <string name="is_auto_advertise">is_auto_advertise</string>
+    <string name="channel_name">Stop Advertise</string>
+    <string name="channel_description">Stop Advertise</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="about">This is first trial version of our application, designed to notify people that somewhere in proximity is someone they are looking for.
+        \nIt uses bluetooth beacon technology to broadcast and listen to, who you are and what you are looking for in other people.
+        \nPlease support us by donation paypal to basiceconomypublishing@gmail.com
+        \nRoadmap:
+        \nWe would like to have funding that will allow us to
+        \n1. Support bluetooth devices like Xiaomi Mi band, galaxy watch, hearphones, to notify you , without the need to look at your phone.
+        \n2. Encrypt data packages end to end, so that noone can reverse engeneer  and decrypt who you are and what your looking for.
+        \n3. Marketing
+        \n4. Apple Iphone version.
+        \nThere are no central servers. There is no data harvesting.
+        \nCompare this app to white t shirt with black marker message on it that you are single and looking for other people interested in travel and space travel. Look for eve contact and talk to strangers... so what if its the wrong person :) we will try to perfect the app so that both of you will get notification in the same time... look around you... dont look at the screen to search for social interactions. Created by Ernest and Sezer. Continue by Tatenda and Ahmad</string>
+    <string name="looking_for_description">In \"looking for\" submenu user input custom parameters preceded with #, i.e. #gameofthrones
+        #biology #livingtiny #fastfurious #space #photography #art. His/her interests,
+        that he/she is looking for to share with other compatible individuals in proximity.\n</string>
+</resources>
