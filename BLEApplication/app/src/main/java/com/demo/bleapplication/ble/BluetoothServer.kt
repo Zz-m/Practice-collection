@@ -7,6 +7,8 @@ import android.bluetooth.le.AdvertiseData
 import android.bluetooth.le.AdvertiseSettings
 import android.content.Context
 import android.os.Build
+import android.provider.SyncStateContract
+import com.demo.bleapplication.YOUR_MANUFACTURER_ID
 import com.demo.bleapplication.data.UserProfileData
 import com.demo.bleapplication.viewModel.GetData
 import com.welie.blessed.AdvertiseError
@@ -35,9 +37,11 @@ class BluetoothServer(private val context: Context) {
             .setTimeout(0)
             .setTxPowerLevel(AdvertiseSettings.ADVERTISE_TX_POWER_ULTRA_LOW)
             .build()
+        Timber.tag("Local User:").d(getLocalData().toString())
         val advertiseData = AdvertiseData.Builder()
             .setIncludeTxPowerLevel(true)
             .setIncludeDeviceName(true)
+            .addManufacturerData(YOUR_MANUFACTURER_ID, UserProfileData.toByteArray(getLocalData()))
             .build() //Create payload
         val scanResponse = AdvertiseData.Builder()
             .setIncludeDeviceName(true)

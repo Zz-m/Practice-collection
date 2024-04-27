@@ -9,3 +9,6 @@ const val MANUFACTURER_ID_XIAOMI = 0x0008
 // universal android manufacturer id
 const val MANUFACTURER_ID_ANDROID = 0x0006
 const val UUID = "81e991e3-57f1-49e5-9c11-4061ac4a7785"
+
+
+const val YOUR_MANUFACTURER_ID = 0xFFFF

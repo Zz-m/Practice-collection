@@ -58,6 +58,9 @@
 
                     Timber.tag("Current Device Profile").d("$localProfile")
 
+
+//                    Timber.tag("Found Device Profile").d()
+
                     Intent(ACTION_PROFILE_MATCH_FOUND).apply {
                         putExtra("deviceName", peripheral.name)
                         context.sendBroadcast(this)
@@ -105,7 +108,8 @@
 
         fun startScanning() {
             hasVibrated = false
-            centralManager.scanForPeripherals()
+//            centralManager.scanForPeripherals()
+
         }
 
         fun initialize(context: Context, onScanResultCallback: OnScanResultCallback) {

@@ -2,6 +2,7 @@
 
 package com.demo.bleapplication.fragments
 
+import android.Manifest
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.NotificationChannel
@@ -10,12 +11,15 @@ import android.app.PendingIntent
 import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothDevice
 import android.bluetooth.BluetoothManager
+import android.bluetooth.le.BluetoothLeScanner
+import android.bluetooth.le.ScanCallback
 import android.bluetooth.le.ScanResult
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.content.SharedPreferences
+import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
 import android.os.Handler
@@ -23,11 +27,14 @@ import android.os.Looper
 import android.os.VibrationEffect
 import android.os.Vibrator
 import android.preference.PreferenceManager
+import android.text.TextUtils
+import android.util.SparseArray
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.annotation.RequiresApi
+import androidx.core.app.ActivityCompat
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.fragment.app.Fragment
@@ -47,6 +54,7 @@ import com.welie.blessed.BluetoothPeripheral
 import timber.log.Timber
 
 
+@SuppressLint("MissingPermission")
 class HomePage : Fragment(), OnScanResultCallback {
 
     private lateinit var navController: NavController
@@ -167,7 +175,9 @@ class HomePage : Fragment(), OnScanResultCallback {
     }
 
     private fun stopBLEOperations() {
-        BluetoothHandler.centralManager.stopScan()
+//        BluetoothHandler.centralManager.stopScan()
+
+        stopNativeScanning()
 
         bluetoothServer?.let {
             if (it.isInitialized && it.peripheralManager.isAdvertising) {
@@ -183,7 +193,8 @@ class HomePage : Fragment(), OnScanResultCallback {
         } else {
             // Permissions are already granted at this point
             startAdvertising()
-            startScanning()
+//            startScanning()
+            startNativeScanning()
         }
     }
 
@@ -213,6 +224,7 @@ class HomePage : Fragment(), OnScanResultCallback {
     private fun startScanning() {
         if (!BluetoothHandler.centralManager.isBluetoothEnabled) {
             enableBleRequest.launch(Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE))
+            Timber.w("bluetooth not enable, fail to start scanning.")
             return
         }
 
@@ -221,6 +233,72 @@ class HomePage : Fragment(), OnScanResultCallback {
 
         } else {
             requestPermissionsScan()
+        }
+    }
+
+    private var scanner:BluetoothLeScanner? = null
+    private fun startNativeScanning() {
+        val bluetoothManager = requireActivity().getSystemService(Context.BLUETOOTH_SERVICE) as BluetoothManager
+        val bluetoothAdapter = bluetoothManager.adapter
+        scanner = bluetoothAdapter.getBluetoothLeScanner()
+        if (ActivityCompat.checkSelfPermission(
+                requireContext(),
+                Manifest.permission.BLUETOOTH_SCAN
+            ) != PackageManager.PERMISSION_GRANTED
+        ) {
+            Timber.e("permission not grant.")
+            return
+        } else {
+
+            scanner?.startScan(leScanCallback);
+        }
+    }
+
+    private fun stopNativeScanning() {
+        if (ActivityCompat.checkSelfPermission(
+                requireContext(),
+                Manifest.permission.BLUETOOTH_SCAN
+            ) != PackageManager.PERMISSION_GRANTED
+        ) {
+            Timber.e("Permission not grant")
+            return
+        }
+        scanner?.stopScan(leScanCallback)
+    }
+
+
+    private val leScanCallback: ScanCallback = object : ScanCallback() {
+        @RequiresApi(api = Build.VERSION_CODES.S)
+        override fun onScanResult(callbackType: Int, result: ScanResult) {
+            super.onScanResult(callbackType, result)
+            val context = context
+            if (context == null) {
+                Timber.w("context is null")
+                return
+            }
+            val device = result.device
+            val deviceName = device.name
+            if (deviceName == "MyBLE") {
+                val manufacturerData = result.scanRecord?.let {record ->
+                    val manufacturerData = record.manufacturerSpecificData
+                    for (i in 0 until record.manufacturerSpecificData.size()) {
+                        val key = manufacturerData.keyAt(i)
+                        val value = manufacturerData.get(key)
+                        Timber.tag("Paired device: ").d(UserProfileData.fromByteArray(value).toString())
+                    }
+                }
+            }
+
+
+        }
+
+        override fun onBatchScanResults(results: List<ScanResult>) {
+            super.onBatchScanResults(results)
+        }
+
+        override fun onScanFailed(errorCode: Int) {
+            super.onScanFailed(errorCode)
+            Timber.e("scan failed code:{}", errorCode)
         }
     }
 
