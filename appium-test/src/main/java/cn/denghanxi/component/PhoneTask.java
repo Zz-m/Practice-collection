@@ -104,7 +104,7 @@ public class PhoneTask implements Runnable {
     private UiAutomator2Options getOptionByDevice(AndroidDevice device) {
         UiAutomator2Options options = new UiAutomator2Options()
                 .setPlatformName("Android")
-                .setAppPackage(AppConstants.APP_PACKAGE)
+                .setAppPackage(AppConstants.TRUTH_SOCIAL_APP_PACKAGE)
                 .setNoReset(false)
                 .setAutoGrantPermissions(true)
                 .setAutomationName("UiAutomator2")
@@ -122,13 +122,13 @@ public class PhoneTask implements Runnable {
         driver.pressKey(new KeyEvent(AndroidKey.HOME));
         logger.debug("press home success");
         //clear app
-        boolean result =adbManager.resetApp(device.udid(), AppConstants.APP_PACKAGE);
+        boolean result =adbManager.resetApp(device.udid(), AppConstants.TRUTH_SOCIAL_APP_PACKAGE);
         Thread.sleep(3000);
         return result;
     }
 
     private void tsLogin(AndroidDriver driver, TSAccount account) {
-        driver.activateApp(AppConstants.APP_PACKAGE);
+        driver.activateApp(AppConstants.TRUTH_SOCIAL_APP_PACKAGE);
         logger.debug("launch app success.");
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement gotoLoginButton = wait.until(ExpectedConditions.elementToBeClickable(AppiumBy.xpath("//android.widget.TextView[@text=\"Already have an account? Sign In\"]")));

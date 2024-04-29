@@ -9,6 +9,7 @@ public class Main {
     public static void main(String[] args) {
         LOGGER.debug("START...");
 //        new TSLiker().test();
-        new TSLiker().start();
+//        new TSLiker().start();
+        new YoutubeAutomator().start();
     }
 }
