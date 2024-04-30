@@ -54,6 +54,9 @@ public class PhoneTask implements Runnable {
         } catch (MalformedURLException e) {
             logger.error("Create driver fail.", e);
             throw new RuntimeException(e);
+        } catch (Exception e) {
+            logger.error("create driver fail.Unhandled error", e);
+            return;
         }
         logger.debug("create driver finish for device:{}", device.udid());
         TSAccount account = accountQueue.poll();

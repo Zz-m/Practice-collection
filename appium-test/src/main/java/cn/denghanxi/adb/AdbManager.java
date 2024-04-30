@@ -78,4 +78,19 @@ public class AdbManager {
             return false;
         }
     }
+
+    public boolean startAppByPackage(String deviceUdid, String packageName) {
+        String commandString = "adb -s " + deviceUdid + " shell monkey -p " + packageName + " -c android.intent.category.LAUNCHER 1";
+        CommandLine commandLine = CommandLine.parse(commandString);
+        DefaultExecutor executor = DefaultExecutor.builder().get();
+        ExecuteWatchdog watchdog = ExecuteWatchdog.builder().setTimeout(Duration.ofSeconds(10)).get();
+        executor.setWatchdog(watchdog);
+        executor.setExitValue(0);
+        try {
+            return executor.execute(commandLine) == 0;
+        } catch (IOException e) {
+            logger.error("resetApp fail on device:[{}]", deviceUdid, e);
+            return false;
+        }
+    }
 }

@@ -47,7 +47,7 @@ public class YoutubeAutomator {
         taskExecutor.shutdown();
 
         try {
-//            Thread.sleep(1000000);
+            Thread.sleep(1000000);
             boolean flag = taskExecutor.awaitTermination(1, TimeUnit.HOURS);
             if (flag) {
                 logger.debug("task success");
