@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bce8a51f-4829-497b-be75-48b453615888" name="Default Changelist" comment="chore">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/adj/BadiDateTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -122,26 +124,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Test1.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Test5.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Test6.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/adj/project/Practice-collection/rxJava/src/main/java/com/adj/util&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.BadiDateTest.executor": "Run",
+    "Application.Test1.executor": "Run",
+    "Application.Test5.executor": "Run",
+    "Application.Test6.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/adj/project/Practice-collection/rxJava/src/main/java/com/adj/util",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\adj\project\Practice-collection\rxJava\src\main\java\com\adj\util" />
@@ -153,9 +156,9 @@
       <recent name="com.adj.wave" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Test6">
-    <configuration name="DistinctTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.adj.DistinctTest" />
+  <component name="RunManager" selected="Application.BadiDateTest">
+    <configuration name="BadiDateTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.adj.BadiDateTest" />
       <module name="rx-java-practice" />
       <extension name="coverage">
         <pattern>
@@ -220,21 +223,29 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.BadiDateTest" />
       <item itemvalue="Application.Test6" />
       <item itemvalue="Application.Test5" />
       <item itemvalue="Application.Test1" />
-      <item itemvalue="Application.DistinctTest" />
       <item itemvalue="Application.Test4" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BadiDateTest" />
         <item itemvalue="Application.Test6" />
         <item itemvalue="Application.Test5" />
         <item itemvalue="Application.Test1" />
         <item itemvalue="Application.Test4" />
-        <item itemvalue="Application.DistinctTest" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -271,6 +282,7 @@
       <workItem from="1704679087861" duration="2134000" />
       <workItem from="1712024605896" duration="98000" />
       <workItem from="1712135801899" duration="856000" />
+      <workItem from="1716183959776" duration="5251000" />
     </task>
     <task id="LOCAL-00001" summary="rxJava 没找到书">
       <created>1561884532819</created>
